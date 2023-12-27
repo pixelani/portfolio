@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>iOS 5</title>
+	<style type="text/css">
+	body {
+		margin: 0;
+		font-family: 'Helvetica Neue', Arial, sans-serif;
+		background-image: url("data:image/gif;base64,R0lGODlhCgAKAIABAN3d3f///yH5BAEKAAEALAAAAAAKAAoAAAIRjA2Zhwoc3GMSykqd1VltzxQAOw==");
+		background-repeat: repeat;
+	}
+
+	.navbar {
+		height: 20px;
+
+		background-color: #dce2e4;
+		background-image: linear-gradient(#f0f5f9, #c0c7cb);
+		color: #000;
+
+		padding: 0 5px;
+		line-height: 20px;
+		font-size: 13px;
+		font-weight: bold;
+
+		box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5) inset;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+	}
+	.nav-col {
+		float: left;
+		width: 33.3333%;
+	}
+	.nav-col:nth-child(1) {
+		color: #404040;
+	}
+	.nav-col:nth-child(2) {
+		text-align: center;
+	}
+	.nav-col:nth-child(3) {
+		text-align: right;
+	}
+	.topbar {
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		height: 44px;
+		padding: 12px 20px;
+		line-height: 20px;
+
+		text-align: center;
+		font-size: 20px;
+		font-weight: bold;
+		color: #fff;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+
+		background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1) 50%, transparent 50%, rgba(0, 0, 0, 0.1));
+		box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 -1px 0 rgba(0, 0, 0, 0.4) inset;
+	}
+
+	.col {
+		float: left;
+		width: 320px;
+		height: 480px;
+	}
+
+	.col-default {
+		background-color: #C5CCD4; /* #dbe1ed */
+		background-image: repeating-linear-gradient(to right, #C5CCD4, #C5CCD4 5px, #CBD2D8 5px, #CBD2D8 7px);
+	}
+	.col-default .topbar {
+		background-color: #7e93b0;
+	}
+
+	.col-black {
+		background-color: #fff;
+	}
+	.col-black .navbar {
+		background-color: #000;
+		background-image: none;
+		text-shadow: none;
+	}
+	.col-black .nav-col {
+		color: #fff;
+	}
+	.col-black .topbar {
+		background-color: #000;
+		background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2) 50%, transparent 50%);
+		text-shadow: none;
+	}
+
+	.left {
+		float: left;
+	}
+	.right {
+		float: right;
+	}
+	.clear {
+		clear: both;
+	}
+	</style>
+</head>
+<body>
+
+	<div class="col col-default">
+		<div class="navbar">
+			<div class="nav-col">Carrier</div>
+			<div class="nav-col">4:34 PM</div>
+			<div class="nav-col">80%</div>
+			<div class="clear"></div>
+		</div>
+		<div class="topbar">Topbar</div>
+	</div>
+
+	<div class="col col-black">
+		<div class="navbar">
+			<div class="nav-col">Carrier</div>
+			<div class="nav-col">4:34 PM</div>
+			<div class="nav-col">80%</div>
+			<div class="clear"></div>
+		</div>
+		<div class="topbar">Topbar</div>
+	</div>
+
+</body>
+</html>
