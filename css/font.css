@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: local('JetBrains Mono'),
+      url('https://cdn.jsdelivr.net/gh/jetbrains/jetbrainsmono@1.0.2/web/woff2/JetBrainsMono-Regular.woff2')
+        format('woff2'), url('https://cdn.jsdelivr.net/gh/jetbrains/jetbrainsmono@1.0.2/web/woff/JetBrainsMono-Regular.woff')
+        format('woff'),
+      url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Regular.ttf')
+        format('truetype'), url('https://cdn.jsdelivr.net/gh/jetbrains/jetbrainsmono@1.0.2/web/eot/JetBrainsMono-Regular.eot')
+        format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  code {
+    -webkit-font-feature-settings: 'liga' on, 'calt' on;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: 'JetBrains Mono';
+  }
+  

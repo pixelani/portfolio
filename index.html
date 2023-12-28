@@ -1,1 +1,97 @@
-# webdesign
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullstack-Design</title>
+    <!-- Boot Strap 5 -->
+    <link   href="./bootstrap5/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="./bootstrap5/js/bootstrap.min.js"></script>
+    <!-- jQuery 3.x-->
+    <script src="./jQuery/jquery-3.7.0.min.js"></script>
+    <!-- Common Style-->
+    <link   href="css/ios.css" rel="stylesheet">
+    <link   href="css/main.css" rel="stylesheet">
+    <link   href="css/_root.css" rel="stylesheet">
+
+    <!-- Include Html -->
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+        </script>
+</head>
+<body>
+    <section class="iphoneMock">
+        <div class="container">
+          <div class="iphone">
+            <div class="bordeColor">
+              <div class="botones">
+                <div class="switch"></div>
+                <div class="vol up"></div>
+                <div class="vol down"></div>
+                <div class="touchID"></div>
+              </div>
+              <div class="bordeNegro">
+                <div class="stage">
+                    <div class="nav">
+                        <span><a href="#">3D</a></span>
+                        <span style="display: none;" class="sub_3d"></span>
+                        <span><a href="#">WEB</a></span>
+                        <span style="display: none;" class="sub_web"></span>
+                        <span><a href="#">CG</a></span>
+                        <span style="display: none;" class="sub_cg"></span>
+                        <span><a href="#">PAPER</a></span>
+                        <span style="display: none;" class="sub_paper"></span>
+                        <span><a href="#">UX/UI</a></span>
+                        <span style="display: none;" class="sub_ux"></span>
+                        <span><a href="#">MOV</a></span>
+                        <span style="display: none;" class="sub_mov"></span>
+                    </div>
+                </div>
+                  <div class="lockScreen">
+                    <!-- <div w3-include-html="h1.html"></div> 
+                    <div w3-include-html="content.html"></div>  -->
+                    <div class="unlockBar" data-msj="Desliza hacia arriba para desbloquear"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+<script>
+includeHTML();
+</script>
+
+</body>
+</html>

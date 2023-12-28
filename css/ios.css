@@ -1,0 +1,197 @@
+
+
+
+.iphoneMock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+.iphoneMock .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.iphoneMock .container .iphone {
+  width: 100%;
+  min-width: 960px;
+  height: 640px;
+  min-height: 640px;
+  border-radius: 45px;
+  position: relative;
+}
+.iphoneMock .container .iphone.initAnimation {
+  transform: translateY(200px);
+}
+.iphoneMock .container .iphone.initAnimation .bordeColor {
+  transform: rotateY(180deg);
+  box-shadow: inset 0 0 7px 1px #fff;
+}
+.iphoneMock .container .iphone.initAnimation .bordeColor .backSide {
+  pointer-events: all;
+}
+
+.iphoneMock .container .iphone.showBackSide .bordeColor {
+  transform: rotateY(180deg);
+  box-shadow: inset 0 0 7px 1px #fff;
+}
+.iphoneMock .container .iphone.showBackSide .bordeColor .backSide {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.iphoneMock .container .iphone:before, .iphoneMock .container .iphone:after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 6px;
+  height: 7px;
+  z-index: 1;
+}
+.iphoneMock .container .iphone .bordeColor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #152839;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 0 3px 1px #fff;
+  border-radius: 45px;
+  position: relative;
+  transition: ease all 0.5s;
+}
+.iphoneMock .container .iphone .bordeColor .botones > * {
+  position: absolute;
+  left: -3px;
+  width: 3px;
+  background: linear-gradient(90deg, transparent, #152839);
+  border-radius: 20px 10px 10px 20px;
+}
+.iphoneMock .container .iphone .bordeColor .botones .touchID {
+  top: 160px;
+  right: -3px;
+  left: auto;
+  height: 80px;
+  background: linear-gradient(90deg, #152839, transparent);
+  border-radius: 10px 20px 20px 10px;
+}
+.iphoneMock .container .iphone .bordeColor .botones .switch {
+  top: 100px;
+  height: 25px;
+}
+.iphoneMock .container .iphone .bordeColor .botones .vol {
+  top: 150px;
+  height: 45px;
+}
+.iphoneMock .container .iphone .bordeColor .botones .vol.down {
+  top: 210px;
+}
+.iphoneMock .container .iphone .bordeColor .backSide {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  border-radius: 40px;
+  background-color: #152839;
+  transform: rotateY(180deg);
+  opacity: 1;
+  /* visibility: hidden; */
+  pointer-events: none;
+  /* overflow: hidden; */
+  transition: ease all 0.3s;
+  z-index: 1000;
+}
+.iphoneMock .container .iphone .bordeColor .backSide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle farthest-corner at 245px 0px, rgba(255, 255, 255, 0.1), transparent);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.iphoneMock .container .iphone .bordeColor .bordeNegro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  border-radius: 40px;
+  background-color: #eee;
+  position: relative;
+  /* overflow: hidden; */
+}
+.iphoneMock .container .iphone .bordeColor .bordeNegro:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  border: 7px solid #000;
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 100;
+}
+.iphoneMock .container .iphone .bordeColor .bordeNegro .notch {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 32px;
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+  background-color: #000;
+  z-index: 100;
+}
+
+@media only screen and (max-width: 700px) {
+  .iphoneMock .container .interactionInfo p, .iphoneMock .container .interactionInfo h1 {
+    text-align: center;
+  }
+  .iphoneMock .container .interactionInfo .botones {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .iphoneMock .container .interactionInfo .botones .boton {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
