@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +12,83 @@
     <!-- Common Style-->
     <link   href="css/ios.css" rel="stylesheet">
     <link   href="css/main.css" rel="stylesheet">
-    <!--<link   href="css/_root.css" rel="stylesheet">-->
+    <link   href="css/_root.css" rel="stylesheet">
 
 
+    <!-- Motion Query -->
+		
+    <link rel="stylesheet" href="css/jquery.flipster.min.css">
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/gallery.css" />
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/gallery.js"></script>
+    <script src="js/jquery.flipster.min.js"></script>
+
+    <style>
+
+
+
+      h1 {
+          text-align: center;
+          color: #eee;
+          
+          font-family: 'Noto Sans KR', sans-serif;
+          font-size: 20px;
+          text-shadow:    0px     10px      0px    #02a0e5,
+                          0px     20px      5px    #ff3,
+                          
+                      /*  x       y       blur    color */
+          ;
+          border: 1px solid #02a0e5;
+          border-radius: 20px;
+          padding: 18px;
+          border-top: none;
+          border-bottom: none;
+
+          opacity: 1.8;
+          width: 400px;
+          z-index: -100;
+          margin: 20px auto;
+      }
+
+      .w400 {
+          width: 400px;
+          margin: auto;
+      }
+
+      .font {
+          font-family: 'Noto Sans KR', sans-serif;
+          font-size: 14px;
+          color: #eee;
+      }
+      .font_sm {
+          font-family: 'Noto Sans KR', sans-serif;
+          font-size: 12px;
+          color: #eee;
+      }
+
+      .img {
+          border: 1px solid #666;
+          border-radius: 20px;
+      }
+
+      .bg {
+          background-image: url('./img/slider_bg.png');
+      }
+
+      .center {
+          text-align: center;
+      }
+
+      video {
+          border: 1px solid #666;
+          border-radius: 50px;
+      }
+
+
+
+  </style>
+  
 </head>
 <body>
     <section class="iphoneMock">
@@ -30,23 +104,147 @@
               <div class="bordeNegro">
                 <div class="stage">
                     <div class="nav">
-                        <span><a href="#">3D</a></span>
-                        <span style="display: none;" class="sub_3d"></span>
-                        <span><a href="#">WEB</a></span>
-                        <span style="display: none;" class="sub_web"></span>
-                        <span><a href="#">CG</a></span>
-                        <span style="display: none;" class="sub_cg"></span>
-                        <span><a href="#">PAPER</a></span>
-                        <span style="display: none;" class="sub_paper"></span>
-                        <span><a href="#">UX/UI</a></span>
-                        <span style="display: none;" class="sub_ux"></span>
-                        <span><a href="#">MOV</a></span>
-                        <span style="display: none;" class="sub_mov"></span>
+                        <span class="nav_btn"><a href="#">3D</a></span><span style="display: none;" class="sub_3d"></span>
+                        <span class="nav_btn"><a href="#">WEB</a></span><span style="display: none;" class="sub_web"></span>
+                        <span class="nav_btn"><a href="#">CG</a></span><span style="display: none;" class="sub_cg"></span>
+                        <span class="nav_btn"><a href="#">PAPER</a></span><span style="display: none;" class="sub_paper"></span>
+                        <span class="nav_btn"><a href="#">UX/UI</a></span><span style="display: none;" class="sub_ux"></span>
+                        <span class="nav_btn"><a href="#">MOV</a></span><span style="display: none;" class="sub_mov"></span>
                     </div>
                 </div>
                   <div class="lockScreen">
 
-                    <div class="unlockBar" data-msj="Desliza hacia arriba para desbloquear"></div>
+
+                    <!-- Stage Start -->
+
+
+
+                    <div id="coverflow">
+                      <ul class="flip-items">
+                          <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                              <img class="img" src="./img/psd_lens_a.png" alt="i"><br>
+                              <span class="font">Design Template</span>
+                          </li>
+                          <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                              <img class="img" src="./img/psd_lens_b.png" alt="i"><br>
+                              <span class="font">Design Template</span>
+                          </li>
+                          <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                              <img class="img" src="./img/psd_baseball.png" alt="i"><br>
+                              <span class="font">Design Template</span>
+                          </li>
+                          <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                              <img class="img" src="./img/psd_baseball2.png" alt="i"><br>
+                              <span class="font">Design Template</span>
+                          </li>
+                          <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                              <img class="img" src="./img/psd_soccerball1.png" alt="i"><br>
+                              <span class="font">Design Template</span>
+                          </li>
+                          <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                              <img class="img" src="./img/psd_soccerball2.png" alt="i"><br>
+                              <span class="font">Design Template</span>
+                          </li>
+                          <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                              <img class="img" src="./img/psd_house.png" alt="i"><br>
+                              <span class="font">Dummy House</span>
+                          </li>
+                          <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                              <img class="img" src="./img/psd_speaker.png" alt="i"><br>
+                              <span class="font">Design Template</span>
+                          </li>
+                          <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                              <img class="img" src="./img/psd_shirts0.png" alt="i"><br>
+                              <span class="font">Design Template</span>
+                          </li>
+                          <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                              <img class="img" src="./img/psd_shirts2.png" alt="i"><br>
+                              <span class="font">Design Template</span>
+                          </li>
+                          <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                              <img class="img" src="./img/psd_shirts1.png" alt="i"><br>
+                              <span class="font">Design Template</span>
+                          </li>
+                      </ul>
+                  </div>
+              <script>
+                  var coverflow = $("#coverflow").flipster()
+              </script>
+
+
+
+
+<!--  Motion Effect Division//////
+
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden">
+                      <defs>
+                        <filter id="blur">
+                          <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+                        </filter>
+                      </defs>
+                    </svg>
+                    <div class="container">
+                      <div class="content">
+                        <div class="gallery">
+                          <ul class="gallery-pictures">
+                            <li class="gallery-picture">
+                              <img class="pa_img" src="img/drdre.png" alt="img01">
+                            </li>
+                            <li class="gallery-picture">
+                              <img class="pa_img" src="img/em_08.png" alt="img08">
+                            </li>
+                            <li class="gallery-picture">
+                              <img class="pa_img" src="img/em_01.png" alt="img02">
+                            </li>
+                            <li class="gallery-picture">
+                              <img class="pa_img" src="img/em_02.png" alt="img03">
+                            </li>
+                            <li class="gallery-picture">
+                              <img class="pa_img" src="img/em_03.png" alt="img04">
+                            </li>
+                            <li class="gallery-picture">
+                              <img class="pa_img" src="img/em_04.png" alt="img05">
+                            </li>
+                            <li class="gallery-picture">
+                              <img class="pa_img" src="img/em_05.png" alt="img06">
+                            </li>
+                            <li class="gallery-picture">
+                              <img class="pa_img" src="img/em_06.png" alt="img07">
+                            </li>
+                            <li class="gallery-picture">
+                              <img class="pa_img" src="img/em_07.png" alt="img08">
+                            </li>
+                          </ul>
+                          <div class="gallery-pagination">
+                            <button class="gallery-pagination-dot"></button>
+                            <button class="gallery-pagination-dot"></button>
+                            <button class="gallery-pagination-dot"></button>
+                            <button class="gallery-pagination-dot"></button>
+                            <button class="gallery-pagination-dot"></button>
+                            <button class="gallery-pagination-dot"></button>
+                            <button class="gallery-pagination-dot"></button>
+                            <button class="gallery-pagination-dot"></button>
+                            <button class="gallery-pagination-dot"></button>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+ -->
+<!-- /container -->
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Stage End -->
+
                   </div>
                 </div>
               </div>
@@ -60,6 +258,9 @@
 
 
 
-
+      <script>
+        includeHTML();
+        </script>
+        
 </body>
 </html>

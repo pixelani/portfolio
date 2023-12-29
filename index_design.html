@@ -1,0 +1,200 @@
+﻿<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>최병훈 컴퓨터그래픽 포트폴리오</title>
+    <meta name="description" content="최병훈 포트폴리오">
+    <meta name="viewport" content="width=550, initial-scale=1">
+    <!-- Font Loading : Noto Sans Kr -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!--// Page Style : CSS 
+    <link rel="stylesheet" href="css/style.css">-->
+
+    <!-- jQuery Loding -->
+    <link rel="stylesheet" href="css/jquery.flipster.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.flipster.min.js"></script>
+
+    
+    
+
+    <style>
+
+        body {
+            background-color: #666;
+            background-image: url('./img/slider_bg2.png');
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            text-align: center;
+            color: #eee;
+            
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 20px;
+            text-shadow:    0px     10px      0px    #02a0e5,
+                            0px     20px      5px    #ff3,
+                            
+                        /*  x       y       blur    color */
+            ;
+            border: 1px solid #02a0e5;
+            border-radius: 20px;
+            padding: 18px;
+            border-top: none;
+            border-bottom: none;
+
+            opacity: 1.8;
+            width: 400px;
+            z-index: -100;
+            margin: 20px auto;
+        }
+
+        .w400 {
+            width: 500px;
+            margin: auto;
+        }
+
+        .font {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 14px;
+            color: #eee;
+        }
+        .font_sm {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 12px;
+            color: #eee;
+        }
+
+        .img {
+            border: 1px solid #666;
+            border-radius: 20px;
+        }
+
+        .bg {
+            background-image: url('./img/slider_bg.png');
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        video {
+            border: 1px solid #666;
+            border-radius: 50px;
+        }
+
+        .nav {
+            width: 600px;
+            margin: 0px auto;
+            margin-top: -8px;
+            text-align: center;
+        }
+        .nav .nav_btn {
+            width: 120px;
+            height: 20px;
+            font-size: 12px;
+            background-color: #000;
+            vertical-align: middle;
+            margin: auto;
+            background-color: #000;
+            opacity: 1.0;
+            padding: 5px;
+            border: 1px solid #000;
+            border-radius: 0px 0px 20px 20px;
+            display: inline-block;
+            box-shadow: 0px 2px 1px #c8102e;
+        }
+        .nav .nav_btn:hover {
+            opacity: 1.0;
+            box-shadow: inset 0px -50px 5px #c8102e;
+            transition: 1.5s;
+        }
+
+       .nav .nav_btn a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .nav .nav_btn a:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="nav">
+        <div class="nav_btn"><a href="index_illust.html" target="_top">Vector Image</a></div>
+        <div class="nav_btn"><a href="index_movie.html" target="_top">Photoshop Movie</a></div>
+        <div class="nav_btn"><a href="index.html" target="_top">Photoshop Image</a></div>
+        <div class="nav_btn"><a href="index_design.html" target="_top">PSD Template</a></div>
+    </div>
+
+<article id="demo-default" class="demo">
+    <h1>Photoshop Design</h1>
+
+    
+
+    <div id="coverflow">
+        <ul class="flip-items">
+            <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                <img class="img" src="./img/psd_lens_a.png" alt="i"><br>
+                <span class="font">Design Template</span>
+            </li>
+            <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                <img class="img" src="./img/psd_lens_b.png" alt="i"><br>
+                <span class="font">Design Template</span>
+            </li>
+            <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                <img class="img" src="./img/psd_baseball.png" alt="i"><br>
+                <span class="font">Design Template</span>
+            </li>
+            <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                <img class="img" src="./img/psd_baseball2.png" alt="i"><br>
+                <span class="font">Design Template</span>
+            </li>
+            <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                <img class="img" src="./img/psd_soccerball1.png" alt="i"><br>
+                <span class="font">Design Template</span>
+            </li>
+            <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                <img class="img" src="./img/psd_soccerball2.png" alt="i"><br>
+                <span class="font">Design Template</span>
+            </li>
+            <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                <img class="img" src="./img/psd_house.png" alt="i"><br>
+                <span class="font">Dummy House</span>
+            </li>
+            <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                <img class="img" src="./img/psd_speaker.png" alt="i"><br>
+                <span class="font">Design Template</span>
+            </li>
+            <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                <img class="img" src="./img/psd_shirts0.png" alt="i"><br>
+                <span class="font">Design Template</span>
+            </li>
+            <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                <img class="img" src="./img/psd_shirts2.png" alt="i"><br>
+                <span class="font">Design Template</span>
+            </li>
+            <li class="center" data-flip-title="hgd_cgPortfolio_04">
+                <img class="img" src="./img/psd_shirts1.png" alt="i"><br>
+                <span class="font">Design Template</span>
+            </li>
+        </ul>
+    </div>
+<script>
+    var coverflow = $("#coverflow").flipster()
+</script>
+</article>
+
+<div class="center"><a href="#"><img src="./img/html5-blue.png" alt="icon" width="50px"></a>
+<p class="font" style="margin-top: -5px;">본 문서는 HTML5 무결성 웹표준을 준수 합니다.</p></div>
+</body>
+
+</html>
