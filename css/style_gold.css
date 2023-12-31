@@ -1,0 +1,171 @@
+body {
+    width: 100vw;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 90vw;
+    min-height: 100vh; */
+    background-color: #F5F5F5;
+}
+
+.nav{
+    /* background-color: #fff; */
+    background-image: linear-gradient(45deg, #000, #111, #222, #000);
+    position:absolute;
+    min-width: 400px;
+    display:inline-flex;
+    padding-left: 85px;
+    padding-right: 85px;
+    left: 27px;
+    bottom: 27px;
+    width: calc(100% - 55px);
+    height: 90px;
+    border-bottom-left-radius: 85px;
+    border-bottom-right-radius: 85px;
+    border-collapse:collapse;
+    text-align:center;
+    z-index: 100;
+
+  }
+  .nav_line{
+    content: ' ';
+    display: block;
+    width: calc(100% - 55px);
+    height: 1px;
+    left: 27px;
+    bottom: 115px;
+    position: absolute;
+    background-image: linear-gradient(45deg, #111, #6e0903, #111);
+    z-index:100;
+  }
+
+  .nav .nav_btn {
+  width: 80px;
+	height: 50px;
+	font-size: 12px;
+	background-color: #111;
+    margin: auto;
+	opacity: 1.0;
+	padding: 5px;
+	border-radius: 0px 0px 10px 10px;
+	display: inline-block;
+	box-shadow: 0px 1px 0px #c8102e;
+
+}
+.nav .nav_btn:hover {
+	opacity: 1.0;
+	box-shadow: inset 0px -50px 5px #c8102e;
+	transition: 1.5s;
+}
+
+.nav .nav_btn a {
+	text-decoration: none;
+	color: #fff;
+}
+.nav .nav_btn a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+
+#drawing {
+    margin: 10px;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  
+
+#iphone {
+  position:absolute;
+  display: flex;
+  width: calc(100%);
+  min-width: 450px;
+  height: 100%;
+  margin: 0px;
+  border-radius: 106px;
+  /* border-top-left-radius: 106px;
+  border-top-right-radius: 106px; */
+  border: 1px solid #4b4622;
+  border-bottom: 0;
+  background-image: linear-gradient(45deg, #ffd484, #fbf3b6);
+  box-shadow: 
+    inset 0px 0px 0px 1px #f7ffff,
+    inset 0px 0px 0px 2px #e0e6a9,
+    inset 0px 0px 0px 1px #f7ffff,
+    inset 0px 0px 0px 6px #0d0c08,
+    inset 0px 0px 0px 8px #ffe27a;
+}
+
+#iphone::before,
+#iphone::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 6px;
+  position: absolute;
+  left: 132px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+#iphone::after {
+  left: 0;
+  top: 135px;
+  width: 6px;
+  height: 10px;
+}
+
+.screen {
+    background-image: linear-gradient(45deg, #000, #111, #222, #000);
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 90px;
+    box-shadow: 
+      inset 1px 1px 0px 0px #222,
+      inset 0px 0px 0px 3px #444,
+      inset 0px 0px 10px 10px #222,
+            0px 0px 30px #d9c28d;
+  }
+
+
+
+  .controls-top {
+    position: absolute;
+    background-color: #000;
+    width: 95px;
+    height: 6px;
+    top: -6px;
+    right: 150px;
+    box-shadow: 
+      inset 1px 0px 0px 0px #283651,
+      inset 6px 0px 3px 0px #eff4ff,
+      inset 10px 0px 0px 0px #010103,
+      inset 90px 0px 0px 0px #283651,
+      inset 95px 0px 3px 0px #eff4ff;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+
+.controls-left {
+  position: absolute;
+  background-color: #000;
+  width: 6px;
+  height: 95px;
+  top: 150px;
+  left: -7px;
+  box-shadow: 
+    inset 0px 1px 0px 0px #000,
+    inset 0px 6px 3px 0px #fff0d0,
+    inset 0px 7px 3px 0px #e29e5f,
+    inset 0px 90px 0px 1px #bfb171,
+    inset 0px 92px 0px 0px #fff0d0,
+    inset 0px 95px 3px 0px #000000;
+  border-top-left-radius: 2px;
+}
+
+
+
