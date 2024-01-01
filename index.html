@@ -20,23 +20,17 @@
 
 
   <!-- Common Style-->
-  <link rel="stylesheet" href="./css/_common.css">
+  <link rel="stylesheet" href="./css/_root_20240102.css">
+  <link rel="stylesheet" href="./css/_iphone_20240102.css">
+  <link rel="stylesheet" href="./css/_common_20240102.css">
+  <link rel="stylesheet" href="./css/_stage_20240102.css">
+  <link rel="stylesheet" href="./css/_nav_20240102.css">
 
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
-  
-
-  
-
-
-
+   
 <!-- 외부파일 불러오기 -->
-
-
-
-
-
 
 </head>
 <body>
@@ -46,33 +40,15 @@
 <div id="drawing">
   <div id="full_iphone">
     <div class="full_screen">
-
-
       <div class="stage">
+        <!-- <video loop="loop" autoplay="autoplay" muted="muted">
+            <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1116884/iphone-vid.mp4" type="video/mp4"/>
+          </video> -->
+        <div id="page" class="stage_in2 bd" style="display:show">
 
-
-
-
-        <div id="page" class="stage_in2" style="display:show">
-
-            <iframe class="iframe" src="./external_html.html" scrolling="yes" style="background-color:white;" name="ext" width="100%" height="98%"></iframe>
+            <iframe class="iframe" src="./main_intro.html" scrolling="yes" style="background-color:white;" name="ext" width="100%" height="100%"></iframe>
         
         </div>
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
       </div>
     </div>
   
@@ -82,47 +58,43 @@
       <!--  Drop up menu -->
       <div class="dropup-center dropup">
 
-        <button class="full_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">2D</button>
+        <button class="full_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">CG</button>
         <ul id="_link" class="full_sub dropdown-menu">
-          <li><a class="dropdown-item" href="external_html.html" target="ext">Bitmap</a></li>
-          <li><a class="dropdown-item" href="external_html.html">Vector</a></li>
-          <li><a class="dropdown-item" href="external_html.html">Photo</a></li>
-        </ul>
-
-        <button class="full_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">3D</button>
-        <ul class="full_sub dropdown-menu">
-          <li><a class="dropdown-item" href="#" onclick="appendText()">Architecture</a></li>
-          <li><a class="dropdown-item" href="#">Landscape</a></li>
-          <li><a class="dropdown-item" href="#">Water</a></li>
+          <li><a class="dropdown-item" target="ext" href="pf_cg_digitalimage.html">Digital Image</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">Vector Graphic</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">Photo Graphy</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">Architecture</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">Landscape</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">Water Founding</a></li>
         </ul>
 
         <button class="full_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">WEB</button>
         <ul class="full_sub dropdown-menu">
-          <li><a class="dropdown-item" href="#">Exgample</a></li>
-          <li><a class="dropdown-item" href="#">Branding</a></li>
-          <li><a class="dropdown-item" href="#">Products</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">Exgample Site</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">Branding Site</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">Products Site</a></li>
         </ul>
 
         <button class="full_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">DTP</button>
         <ul class="full_sub dropdown-menu">
-          <li><a class="dropdown-item" href="#">Logo/CI</a></li>
-          <li><a class="dropdown-item" href="#">Documents</a></li>
-          <li><a class="dropdown-item" href="#">Presentation</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">CI/LOGO</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">Documents</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">PPT</a></li>
           
         </ul>
 
         <button class="full_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">UI/UX</button>
         <ul class="full_sub dropdown-menu">
-          <li><a class="dropdown-item" href="#">Game UI</a></li>
-          <li><a class="dropdown-item" href="#">App UI</a></li>
-          <li><a class="dropdown-item" href="#">ICONS</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">Game UI</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">App UI</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">Device UI</a></li>
         </ul>
 
         <button class="full_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">MOV</button>
         <ul class="full_sub dropdown-menu">
-          <li><a class="dropdown-item" href="#">3D Rendering</a></li>
-          <li><a class="dropdown-item" href="#">Motion Graphic</a></li>
-          <li><a class="dropdown-item" href="#">ETC</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">3D Rendering</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">Motion Graphics</a></li>
+          <li><a class="dropdown-item" target="ext" href="external_html.html">Editable ETC</a></li>
         </ul>
       </div>
 
