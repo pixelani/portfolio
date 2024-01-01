@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+  
+.full_nav{
+
+  /* background-image: linear-gradient(45deg, #000, #111, #222);  */
+  position:absolute;
+  left: 27px;
+  bottom: 80px;
+  width: calc(100% - 55px);
+  border-radius: 30px;
+  /* border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px; */
+  text-align:center;
+  z-index: 100;
+
+} 
+
+.w-slider-dot {
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, .4);
+  margin: 0 3px .5em;
+  transition: background-color .1s, color .1s;
+  display: inline-block;
+  position: relative;
+}
+
+
+.full_nav .nav_btn {
+  display: inline-block;
+  width: 10%;
+  height: 50px;
+  font-size: 12px;
+  background-color: #111;
+  margin: auto;
+  opacity: 1.0;
+  padding: 5px;
+  margin-left: 0px;
+  /* border-radius: 0px 0px 10px 10px; */
+
+  box-shadow: 0px 1px 0px #00bb99;
+  
+  }
+
+.full_nav .nav_btn:hover {
+  opacity: 1.0;
+  box-shadow: inset 0px -50px 5px #00bb99;
+  transition: 1.5s;
+  }
+
+
+  .full_nav .nav_btn a {
+  text-decoration: none;
+  color: #fff;
+  }
+
+  .full_nav .nav_btn a:hover {
+  text-decoration: none;
+  color: #fff;
+  }
+
+
+
+
+/* Dropdown Menu */
+.full_btn{
+    width: 60px ;
+    height: 50px;
+    background-color: #111;
+    border: 0px solid;
+    border-radius: 0;
+    border-bottom: 2px solid #00bb99;
+    font-size: 12px;
+    margin-right:5px;
+  }
+
+  .full_btn:hover{
+    box-shadow: inset 0px -50px 0px #00bb99;
+    transition: 0.2s;
+    background-color: #111;
+  }
+  
+    
+  .full_sub{
+  box-shadow: inset 0px 5px 0px #00bb99,
+              inset 0px 10px 0px #009999,
+              inset 0px -5px 0px #00bb99,
+              inset 0px -10px 0px #009999;
+  }
+  
+  .full_sub a{
+    background-color: #222;
+    color: white;
+    border-bottom: 1px solid #00bb99;
+  
+  }
+
+  @media screen and (min-width: 360px) {
+    .full_btn{
+      width: 60px ;
+      height: 50px;
+      background-color: #111;
+      border: 0px solid;
+      border-radius: 0;
+      border-bottom: 2px solid #00bb99;
+      font-size: 12px;
+      margin-right:5px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+  
+  }
+  @media screen and (min-width: 1000px) {
+  
+  }
+  @media screen and (min-width: 1900px) {
+  
+  }

@@ -1,0 +1,88 @@
+body {
+  position:relative;
+    margin: 0;
+    overflow:hidden;
+    /* justify-content: center;
+    align-items: center; */
+    /* max-width: 90vw;
+    min-height: 100vh; */
+    background-color: #eee;
+}
+
+
+h1{
+  height: 30px;
+}
+
+.bd{
+  border: 
+  1px solid #333;
+}
+
+.bd5{
+  border: 5px solid red;
+}
+
+.maincolor{
+    color: #00bb99;
+    background-color: #00bb99;
+}
+
+
+#drawing {
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  
+/* Full_iphone 
+@import url('./_iphone_20240102.css');*/
+
+/* Full stage 
+@import url('./_stage_20240102.css');*/
+
+/* Full nav 
+@import url('./_nav_20240102.css');*/
+
+/* footer */
+
+.footer{
+  position:absolute;
+  min-width: 80%;
+  padding-left: 85px;
+  padding-right: 85px;
+  left: 27px;
+  bottom: 40px;
+  width: calc(100% - 55px);
+  height: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  text-align:center;
+  z-index: 100;
+  color: #aaa;
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 360px) {
+
+}
+@media screen and (min-width: 768px) {
+
+}
+@media screen and (min-width: 1000px) {
+
+}
+@media screen and (min-width: 1900px) {
+
+}
+
+
+

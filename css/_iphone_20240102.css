@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* iPhone color Set */
+
+
+
+#full_iphone {
+  position:absolute;
+  display: flex;
+  left: 30px;
+  top: 30px;
+  width: calc(100% - 45px);
+  min-width: 400px;
+  height: 95%;
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+
+  
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999, 0 0 30px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999, 0 0 30px 0px rgba(0, 0, 0, 0.7);
+  
+
+  border-radius: 106px;
+  border: 1px solid #4b4622;
+  border-bottom: 0;
+  background-image: linear-gradient(45deg, #000, #000);
+  box-shadow: 
+    inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999, 0 0 10px 0px rgba(0, 0, 0, 0.7),
+    inset 0px 0px 0px 1px #333,
+    inset 0px 0px 0px 2px #eee,
+    inset 0px 0px 0px 3px #333,
+    inset 0px 0px 3px 7px #ffe6a1,
+    inset 0px 0px 1px 8px #fff3d1,
+    inset 0px 0px 0px 15px #000;
+}
+/* 
+#full_iphone {
+    position:absolute;
+    display: flex;
+    left: 30px;
+    top: 30px;
+    width: calc(100% - 45px);
+    min-width: 400px;
+    height: 95%;
+  
+    border-radius: 106px;
+    border: 1px solid #4b4622;
+    border-bottom: 0;
+    background-image: linear-gradient(45deg, #000, #111);
+    box-shadow: 
+      inset 0px 0px 0px 1px #333,
+      inset 0px 0px 0px 2px #eee,
+      inset 0px 0px 0px 1px #333,
+      inset 0px 0px 0px 6px #bfb171,
+      inset 0px 0px 0px 8px #ffe6a1,
+      inset 0px 0px 0px 8px #333;
+  } */
+  
+  #full_iphone::before,
+  #full_iphone::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 6px;
+    position: absolute;
+    left: 132px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  #full_iphone::after {
+    left: 0;
+    top: 135px;
+    width: 6px;
+    height: 10px;
+  }
+  
+
+
+.controls-top {
+    position: absolute;
+    background-color: #000;
+    width: 95px;
+    height: 6px;
+    top: -6px;
+    right: 150px;
+    box-shadow: 
+      inset 1px 0px 0px 0px #283651,
+      inset 6px 0px 3px 0px #fff0d0,
+      inset 10px 0px 0px 0px #755232,
+      inset 90px 0px 0px 0px #585134,
+      inset 95px 0px 3px 0px #fff0d0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+  
+  .controls-left {
+  position: absolute;
+  background-color: #000;
+  width: 6px;
+  height: 95px;
+  top: 150px;
+  left: -7px;
+  box-shadow: 
+    inset 0px 1px 0px 0px #000,
+    inset 0px 6px 3px 0px #fff0d0,
+    inset 0px 7px 3px 0px #e29e5f,
+    inset 0px 90px 0px 1px #585134,
+    inset 0px 92px 0px 0px #fff0d0,
+    inset 0px 95px 3px 0px #000000;
+  border-top-left-radius: 2px;
+  }
+  
+  
+  
+@media screen and (min-width: 360px) {
+
+}
+@media screen and (min-width: 768px) {
+
+}
+@media screen and (min-width: 1000px) {
+
+}
+@media screen and (min-width: 1900px) {
+
+}
