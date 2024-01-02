@@ -10,11 +10,12 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  border-radius: 95px;
-  box-shadow: 
+  border-radius: 80px;
+  
+  /* box-shadow: 
     inset 1px 1px 0px 0px #ffe6a1,
     inset 0px 0px 0px 3px #111,
-    inset 0px 0px 10px 10px #000;
+    inset 0px 0px 10px 10px #000; */
           
 }
 
@@ -63,7 +64,7 @@
 .full_screen .stage{
   position: absolute;
   content: '';
-  border-radius: 80px;
+  border-radius: 60px;
   top: 10px;
   left: 10px;
   padding: 40px;
