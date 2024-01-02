@@ -64,6 +64,7 @@
 .full_screen .stage{
   position: absolute;
   content: '';
+  /* border: 1px solid red; */
   border-radius: 60px;
   top: 10px;
   left: 10px;
@@ -73,7 +74,7 @@
   background-color: #111;
   color:#eee;
   overflow-x:hidden;
-  background-color: black;
+
 } 
 
 
@@ -81,18 +82,18 @@
   position: absolute;
   content: '';
   top: 0px;
-  left: -10px;
+  left: 0px;
   padding: 0px;
-  width:calc(100% + 10px);
+  width:calc(100% + 0px);
   height:calc(100% - 0px);
-  /* overflow-x:hidden; */
+  overflow:hidden;
   color:#eee;
   border-radius: 0px;
   background-color: black;
   
 } 
 
-.stage::-webkit-scrollbar {
+/* .stage::-webkit-scrollbar {
   width: 10px;
 }
 .stage::-webkit-scrollbar-thumb {
@@ -107,7 +108,7 @@
   background-color: grey;
   border-radius: 10px;
   box-shadow: inset 0px 0px 5px white;
-}
+} */
 
 
 
