@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+a{
+  text-decoration-line: none;
+}
+
 body {
   font-family: 'Pretendard-Regular';
   position:relative;
@@ -28,11 +32,52 @@ h1    { height: 30px; }
 .mainbg     { background-color: #00bb99;  }
 
 
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 4em;
+}
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.resize {
+text-align: right;
+font-size: .75em;
+}
+
+
+
+
 #drawing {
     margin: 0px;
     width: 100vw;
     height: 100vh;
   }
+
+.full_home {
+  width: 100%;
+  margin: 0 auto;
+  position:fixed;
+  top: 0px;
+  text-align:center;
+  z-index:150;
+}
+.full_home a:link,a:visited,a:hover,a:active {
+  color: #000; 
+}
+.full_home a:hover {
+  color: #00bb99; 
+}
 
   
 /* Full_iphone 
