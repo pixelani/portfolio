@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullstack-Design</title>
+    <!-- Boot Strap 5 -->
+    <link   href="./bootstrap5/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="./bootstrap5/js/bootstrap.min.js"></script>
+    <!-- jQuery 3.x-->
+    <script src="./jQuery/jquery-3.7.0.min.js"></script>
+    <!-- Common Style-->
+    <link   href="css/ios.css" rel="stylesheet">
+    <link   href="css/main.css" rel="stylesheet">
+    <link   href="css/_root.css" rel="stylesheet">
+    <link   href="css/navbar.css" rel="stylesheet">
+
+
+    <!-- Motion Query -->
+		
+
+    <style>
+
+
+
+      h1 {
+          text-align: center;
+          color: #eee;
+          
+          font-family: 'Noto Sans KR', sans-serif;
+          font-size: 20px;
+          text-shadow:    0px     10px      0px    #02a0e5,
+                          0px     20px      5px    #ff3,
+                          
+                      /*  x       y       blur    color */
+          ;
+          border: 1px solid #02a0e5;
+          border-radius: 20px;
+          padding: 18px;
+          border-top: none;
+          border-bottom: none;
+
+          opacity: 1.8;
+          width: 400px;
+          z-index: -100;
+          margin: 20px auto;
+      }
+
+      .w400 {
+          width: 400px;
+          margin: auto;
+      }
+
+      .font {
+          font-family: 'Noto Sans KR', sans-serif;
+          font-size: 14px;
+          color: #eee;
+      }
+      .font_sm {
+          font-family: 'Noto Sans KR', sans-serif;
+          font-size: 12px;
+          color: #eee;
+      }
+
+      .img {
+          border: 1px solid #666;
+          border-radius: 20px;
+      }
+
+      .bg {
+          background-image: url('./img/slider_bg.png');
+      }
+
+      .center {
+          text-align: center;
+      }
+
+      video {
+          border: 1px solid #666;
+          border-radius: 50px;
+      }
+
+
+
+  </style>
+  
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-transparent" color-on-scroll="500">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="#" rel="tooltip" title="Portfolio" data-placement="bottom">
+                Fullstack-Design.com
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" data-nav-image="./assets/img/blurred-image-1.jpg" data-color="orange">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenu" data-toggle="dropdown">
+                        <i class="now-ui-icons design_app"></i>
+                        <p>Components</p>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="index.html">
+                            <i class="now-ui-icons business_chart-pie-36"></i>
+                            All Components
+                        </a>
+                        <a class="dropdown-item"
+                            href="#">
+                            <i class="now-ui-icons files_single-copy-04"></i>
+                            Documentation
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                        <i class="now-ui-icons files_paper" aria-hidden="true"></i>
+                        <p>Sections</p>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="sections.html#headers">
+                            <i class="now-ui-icons shopping_box"></i>
+                            Headers
+                        </a>
+                        <a class="dropdown-item" href="sections.html#features">
+                            <i class="now-ui-icons ui-2_settings-90"></i>
+                            Features
+                        </a>
+                        <a class="dropdown-item" href="sections.html#blogs">
+                            <i class="now-ui-icons text_align-left"></i>
+                            Blogs
+                        </a>
+                        <a class="dropdown-item" href="sections.html#teams">
+                            <i class="now-ui-icons sport_user-run"></i>
+                            Teams
+                        </a>
+                        <a class="dropdown-item" href="sections.html#projects">
+                            <i class="now-ui-icons education_paper"></i>
+                            Projects
+                        </a>
+                        <a class="dropdown-item" href="sections.html#pricing">
+                            <i class="now-ui-icons business_money-coins"></i>
+                            Pricing
+                        </a>
+                        <a class="dropdown-item" href="sections.html#testimonials">
+                            <i class="now-ui-icons ui-2_chat-round"></i>
+                            Testimonials
+                        </a>
+                        <a class="dropdown-item" href="sections.html#contactus">
+                            <i class="now-ui-icons tech_mobile"></i>
+                            Contact Us
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                        <i class="now-ui-icons design_image" aria-hidden="true"></i>
+                        <p>Examples</p>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="examples/about-us.html">
+                            <i class="now-ui-icons business_bulb-63"></i>
+                            About-us
+                        </a>
+                        <a class="dropdown-item" href="examples/blog-post.html">
+                            <i class="now-ui-icons text_align-left"></i>
+                            Blog Post
+                        </a>
+                        <a class="dropdown-item" href="examples/blog-posts.html">
+                            <i class="now-ui-icons design_bullet-list-67"></i>
+                            Blog Posts
+                        </a>
+                        <a class="dropdown-item" href="examples/contact-us.html">
+                            <i class="now-ui-icons location_pin"></i>
+                            Contact Us
+                        </a>
+                        <a class="dropdown-item" href="examples/landing-page.html">
+                            <i class="now-ui-icons education_paper"></i>
+                            Landing Page
+                        </a>
+                        <a class="dropdown-item" href="examples/login-page.html">
+                            <i class="now-ui-icons users_circle-08"></i>
+                            Login Page
+                        </a>
+                        <a class="dropdown-item" href="examples/pricing.html">
+                            <i class="now-ui-icons business_money-coins"></i>
+                            Pricing
+                        </a>
+                        <a class="dropdown-item" href="examples/ecommerce.html">
+                            <i class="now-ui-icons shopping_shop"></i>
+                            Ecommerce Page
+                        </a>
+                        <a class="dropdown-item" href="examples/product-page.html">
+                            <i class="now-ui-icons shopping_bag-16"></i>
+                            Product Page
+                        </a>
+                        <a class="dropdown-item" href="examples/profile-page.html">
+                            <i class="now-ui-icons users_single-02"></i>
+                            Profile Page
+                        </a>
+                        <a class="dropdown-item" href="examples/signup-page.html">
+                            <i class="now-ui-icons tech_mobile"></i>
+                            Signup Page
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+  <section class="iphoneMock">
+        <div class="container">
+          <div class="iphone">
+            <div class="bordeColor">
+              <div class="botones">
+                <div class="switch"></div>
+                <div class="vol up"></div>
+                <div class="vol down"></div>
+                <div class="touchID"></div>
+              </div>
+              <div class="bordeNegro">
+                <div class="stage">
+                    <div class="nav">
+                        <span class="nav_btn"><a href="#">3D</a></span><span style="display: none;" class="sub_3d"></span>
+                        <span class="nav_btn"><a href="#">WEB</a></span><span style="display: none;" class="sub_web"></span>
+                        <span class="nav_btn"><a href="#">CG</a></span><span style="display: none;" class="sub_cg"></span>
+                        <span class="nav_btn"><a href="#">PAPER</a></span><span style="display: none;" class="sub_paper"></span>
+                        <span class="nav_btn"><a href="#">UX/UI</a></span><span style="display: none;" class="sub_ux"></span>
+                        <span class="nav_btn"><a href="#">MOV</a></span><span style="display: none;" class="sub_mov"></span>
+                    </div>
+                </div>
+                  <div class="lockScreen">
+
+
+                    <!-- Stage Start -->
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Stage End -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+			<div>ⓒ 2023 Copyrights fullstack-design.com. All rights Reserved.</div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+
+      <script>
+        includeHTML();
+        </script>
+        
+</body>
+</html>

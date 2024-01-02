@@ -9,6 +9,7 @@
       <style>
          body {
              margin: 0;
+             overflow-x:hidden;
          }
          .gnb {
             width:100%;
@@ -16,77 +17,67 @@
             margin: 0;
          }
 
-         video{
-         background-size: cover;
-         background-repeat: no-repeat;
-         src:url('./mov/es_intro_winter.mp4');
-         zoom: 100%;
+/******** Scroll Bar *******/
+         ::-webkit-scrollbar {
+         width: 10px;
          }
-
-         .scale2{
-  -moz-transform:scale(1.5);
-  -webkit-transform:scale(1.5);
-  -o-transform:scale(1.5);
-  -ms-transform:scale(1.5);
-  transform:scale(1.5);
-}
-         
-         .video-container{
-         margin: 0px auto;
-         width: 100%;
-
-         color: white;
+         ::-webkit-scrollbar-thumb {
+         background-color: #555;
+         border-radius: 10px;
+         box-shadow: inset 0px 0px 2px #888,
+               inset 0px 5px 2px #eee ;
          }
+         ::-webkit-scrollbar-track {
+         background-color: #333;
+         border-radius: 0px;
+         box-shadow: inset 0px 0px 20px #111 ;
+         opacity: 0.5;
+
+         }
+/******** End : Scroll Bar *******/
 
 
-         @media screen and (min-width: 0px) {
-            video{
+         .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
             width: 100%;
-            margin-left: 0;
-            height: 100vh;
-            margin-top: -100px;
-            -moz-transform:scale(2.5);
-            -webkit-transform:scale(2.5);
-            -o-transform:scale(2.5);
-            -ms-transform:scale(2.5);
-            transform:scale(2.5);
+            z-index: -1;
+            opacity: 1;
+            
+            }
+
+            .bg-video__content {
+            height: 100%;
+            width: 100%;
+            object-fit: cover; 
+            
+            }
+         
+
+
+
+         @media screen and (min-width: 250px) {
+            .bg-video {
+               margin-top: -100px;
+               scale: 2;
+               overflow-x:hidden;
             }
          }
          @media screen and (min-width: 768px) {
-            video{
-            width: 100%;
-            height: 100vh;
-            margin-top: -100px;
-            -moz-transform:scale(2);
-            -webkit-transform:scale(2);
-            -o-transform:scale(2);
-            -ms-transform:scale(2);
-            transform:scale(2);
+            .bg-video {
+               margin-top: -100px;
+               scale: 1.5;
+               overflow-x:hidden;
             }
+           
          }
          @media screen and (min-width: 960px) {
-            video{
-            width: 100%;
-            height: 100vh;
-            margin-top: -100px;
-            -moz-transform:scale(2);
-            -webkit-transform:scale(2);
-            -o-transform:scale(2);
-            -ms-transform:scale(2);
-            transform:scale(2);
-            }
+           
          }
          @media screen and (min-width: 1700px) {
-            video{
-            width: 100%;
-            height: 100vh;
-            margin-top: -100px;
-            -moz-transform:scale(2);
-            -webkit-transform:scale(2);
-            -o-transform:scale(2);
-            -ms-transform:scale(2);
-            transform:scale(2);
-            }
+           
          }
       </style>
       
@@ -95,11 +86,12 @@
    </head>
    <body>
       <div class="gnb">
-         <div class="video-container">
-            <video loop="loop" autoplay="autoplay" muted="muted" display="false">
-                  <source src="./mov/es_intro_winter.mp4" type="video/mp4"/>
+         <div class="bg-video">
+            <video class="bg-video__content" autoplay muted loop>
+              <source src="./mov/es_intro_winter.mp4" type="video/mp4" />
+              <source src="./mov/es_intro_winter.webm" type="video/webm" />
             </video>
-         </div>
+          </div>
       </div>
 
    </body>
