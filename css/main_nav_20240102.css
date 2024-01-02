@@ -75,39 +75,39 @@
 .full_btn{
     width: 120px;
     height: 50px;
-    background-color: #111;
+    background-color: var(--black);
     border: 0px solid;
     border-radius: 0;
-    border-bottom: 1px solid #00bb99;
+    border-bottom: 1px solid var(--main-color);
     font-size: 12px;
     margin-right:5px;
   }
 
   .full_btn:hover{
-    box-shadow: inset 0px -50px 0px #00bb99;
+    box-shadow: inset 0px -50px 0px var(--main-color);
     transition: 0.2s;
-    background-color: #111;
+    background-color: var(--black);
   }
   
   .full_link{     font-size: 12px;    }
   
   .dropdown-title {  
     font-size: 10px;
-    background-color: #003a2f;
-    border-bottom: 1px solid #005c4b;
+    background-color: var(--bk-5);
+    border-bottom: 1px solid var(--bk-7);
     }
     
   .full_sub{
-  box-shadow: inset 0px 5px 0px #00bb99,
-              inset 0px 10px 0px #009999,
-              inset 0px -5px 0px #00bb99,
-              inset 0px -10px 0px #009999;
+  box-shadow: inset 0px 5px 0px var(--bk-6),
+              inset 0px 10px 0px var(--bk-7),
+              inset 0px -5px 0px var(--bk-6),
+              inset 0px -10px 0px var(--bk-7);
   }
   
   .full_sub a{
-    background-color: #222;
-    color: white;
-    border-bottom: 1px solid #003a2f;
+    background-color: var(--black);
+    color: var(--primary-100);
+    border-bottom: 1px solid var(--bk-6);
   
   }
 
@@ -115,10 +115,10 @@
     .full_btn{
       width: 70px ;
       height: 50px;
-      background-color: #111;
+      background-color: var(--black);
       border: 0px solid;
       border-radius: 0;
-      border-bottom: 2px solid #00bb99;
+      border-bottom: 2px solid var(--main-color);
       font-size: 12px;
       margin-right:5px;
     }
