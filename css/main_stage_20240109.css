@@ -28,7 +28,8 @@
 .full_screen .stage{
   position: absolute;
   content: '';
-  border-radius: 70px;
+  border-top-right-radius: 70px;
+  border-top-left-radius: 70px;
   /* border: 1px solid red; */
   top: 6px;
   left: 6px;
@@ -53,7 +54,8 @@
   height:calc(100% - 0px);
   overflow:hidden;
   color:#eee;
-  border-radius: 70px;
+  border-top-right-radius: 70px;
+  border-top-left-radius: 70px;
   background-color: black;
   
 } 
@@ -84,21 +86,29 @@
 
 @media screen and (min-width: 0px) {
   .full_screen .stage{
+    border-top-right-radius: 70px;
+    border-top-left-radius: 70px;
     height:calc(100% - 130px);
   } 
 }
 @media screen and (min-width: 768px) {
   .full_screen .stage{
+    border-top-right-radius: 70px;
+    border-top-left-radius: 70px;
     height:calc(100% - 130px);
   } 
 }
 @media screen and (min-width: 1000px) {
   .full_screen .stage{
+    border-top-right-radius: 70px;
+    border-top-left-radius: 70px;
     height:calc(100% - 130px);
   } 
 }
 @media screen and (min-width: 1600px) {
   .full_screen .stage{
+    border-top-right-radius: 70px;
+    border-top-left-radius: 70px;
     height:calc(100% - 130px);
   } 
 }
