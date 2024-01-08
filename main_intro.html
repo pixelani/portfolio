@@ -33,9 +33,9 @@
    }
 
    .bg-video {
-      margin-top: -40px;
+      margin-top: -10px;
       margin-left:-30px;
-      scale: 2.0;
+      scale: 2;
       overflow:hidden;
    }
    .bg-video__content {
@@ -45,10 +45,10 @@
    
    }
 }
-   @media screen and (min-width: 608px) {
+   @media screen and (min-width: 768px) {
       .bg-video {
-         margin-top: -70px;
-         scale: 1.5;
+         margin-top: -80px;
+         scale: 1.4;
          overflow-x:hidden;
       }
       
@@ -59,10 +59,10 @@
    
    }
 }
-   @media screen and (min-width: 960px) {
+   @media screen and (min-width: 1000px) {
       .bg-video {
-         margin-top: -50px;
-         scale: 1.5;
+         margin-top: -130px;
+         scale: 1.2;
          overflow-x:hidden;
       }
       
@@ -74,10 +74,25 @@
    }
       
 }
-   @media screen and (min-width: 1500px) {
+   @media screen and (min-width: 1600px) {
       .bg-video {
-         margin-top: -50px;
+         margin-top: -90px;
          scale: 1.0;
+         overflow:hidden;
+         height: 100vh;
+      }
+   .bg-video__content {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; 
+   
+   }
+} 
+
+@media screen and (min-width: 1920px) {
+      .bg-video {
+         margin-top: -70px;
+         scale: 0.8;
          overflow:hidden;
          height: 100vh;
       }
