@@ -84,6 +84,22 @@
   }
 
   @media screen and (min-width: 0px) {
+    .btn_sub{
+      position: absolute;
+      display: hidden;
+      left: 5px;
+      width: calc(100% - 5px);
+      bottom: 50px;
+      }
+      
+      .btn_off:hover .btn_sub{
+      position: absolute;
+      right: 0;
+      font-size: 12px;
+      position: absolute;
+      display: block;
+      bottom: 45px;
+      }
 
     .dropdown, .dropdown-menu{
       width: calc(20% - 50px);
@@ -92,7 +108,7 @@
     .dropdown-item{
       padding: 10px 0px;
       font-size: 15px;
-      text-indent: 15px;
+      text-indent: 5px;
     }
 
 
@@ -108,6 +124,21 @@
     }
   }
   @media screen and (min-width: 768px) {
+    .btn_sub{
+      position: absolute;
+      display: hidden;
+      left: 5px;
+      width: calc(100% - 5px);
+      bottom: 50px;
+      }
+      
+      .btn_off:hover .btn_sub{
+      width: calc(100% - 10px);
+      font-size: 12px;
+      position: absolute;
+      display: block;
+      bottom: 45px;
+      }
 
     .dropdown, .dropdown-menu{
       width: calc(20% - 14px);
@@ -128,6 +159,23 @@
 
   }
   @media screen and (min-width: 1000px) {
+
+    .btn_sub{
+      position: absolute;
+      display: hidden;
+      left: 5px;
+      width: calc(100% - 5px);
+      bottom: 50px;
+      }
+      
+      .btn_off:hover .btn_sub{
+      width: calc(100% - 10px);
+      font-size: 12px;
+      position: absolute;
+      display: block;
+      bottom: 45px;
+      }
+      
     .full_nav{
       position:absolute;
       left: 10px;
