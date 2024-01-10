@@ -94,6 +94,11 @@
       font-size: 10px;
       margin-right:-4px;
     }
+    .full_sub{
+      width: calc(20% - 6px);
+      margin-right: 0px;
+      border-bottom: 2px solid var(--main-color);
+    }
   }
   @media screen and (min-width: 768px) {
     .full_nav{
