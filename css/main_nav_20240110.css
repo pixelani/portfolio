@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* CSS Document */
+  
+.full_nav{
+  position:absolute;
+  left: 6px;
+  bottom: 80px;
+  width:calc(100% - 12px);
+  
+  text-align:center;
+  z-index: 100;
+
+} 
+.id{
+  text-indent: 2em;
+  color: white;
+}
+
+
+/* Dropdown Menu */
+.full_btn{
+    width: 20%;
+    height: 50px;
+    background-color: #111;
+    border: 0px solid;
+    border-radius: 0;
+    border-bottom: 2px solid var(--main-color);
+    font-size: 12px;
+    margin-right:5px;
+  }
+
+  .full_btn:hover{
+    box-shadow: inset 0px -50px 0px var(--main-color);
+    transition: 0.2s;
+    background-color: #111;
+  }
+
+  .dropdown-menu{
+    --bs-dropdown-padding-y: 0px;
+    border-top: 3px solid var(--main-color);
+    border-bottom: 1x solid var(--main-color);
+    box-shadow: 0px 1px 0px 1px #80deea,
+                0px 0px 0px 2px var(--main-color);
+    border-radius: 3px;
+    background-color:#222;
+  }
+
+  .dropdown{
+    cursor: pointer;
+  }
+
+  button .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+  }
+  
+  .full_link{     font-size: 12px;    }
+  
+  .dropdown-title {  
+    font-size: 10px;
+    background-color: #003a2f;
+    }
+    
+  /* .full_sub{
+  box-shadow: inset 0px 5px 0px #00bb99,
+              inset 0px 10px 0px #009999,
+              inset 0px -5px 0px #00bb99,
+              inset 0px -10px 0px #009999;
+  } */
+  
+  .full_sub a{
+    background-color: #222;
+    color: white;
+    /* border-bottom: 1px solid #003a2f; */
+  
+  }
+
+  @media screen and (min-width: 0px) {
+    .full_btn{
+      width: calc(20% - 2px);
+      height: 50px;
+      background-color: #111;
+      border: 0px solid;
+      border-radius: 0;
+      border-bottom: 2px solid var(--main-color);
+      font-size: 10px;
+      margin-right:-4px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .full_nav{
+      position:absolute;
+      left: 5px;
+      bottom: 80px;
+      width:calc(100% - 10px);
+    } 
+    .full_btn{
+      width: calc(20% - 6px);
+      margin-right: 0px;
+      border-bottom: 2px solid var(--main-color);
+    }
+
+  }
+  @media screen and (min-width: 1000px) {
+    .full_nav{
+      position:absolute;
+      left: 10px;
+      bottom: 80px;
+      width:calc(100% - 0px);
+    } 
+    .full_btn{
+      width: calc(20% - 6px);
+      margin-right: 0px;
+      border-bottom: 3px solid var(--main-color);
+    }
+  
+  }
+  @media screen and (min-width: 1600px) {
+    .full_nav{
+      position:absolute;
+      left: -10px;
+      bottom: 80px;
+      width:calc(100% - -10px);
+    } 
+    .full_btn{
+      left: 6px;
+      width: calc(20% - 10px);
+      margin-right: 0px;
+      border-bottom: 4px solid var(--main-color);
+    }
+  
+  }
