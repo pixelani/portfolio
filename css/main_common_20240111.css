@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+a{
+  text-decoration-line: none;
+}
+
+body {
+  font-family: 'Pretendard-Regular';
+  position:relative;
+    margin: 0;
+    overflow:hidden;
+    /* justify-content: center;
+    align-items: center; */
+    /* max-width: 90vw;
+    min-height: 100vh; */
+    background-color: #eeeeee;
+}
+
+h1    { height: 30px; }
+.f14  {	font-size: 14px	}
+.f20  {	font-size: 20px	}
+.f24  {	font-size: 24px	}
+.b    { font-weight: 700	}
+.bd   { border:     1px solid #333; }
+.bd5  { border: 5px solid red;  }
+.maincolor  { color: #00bb99;     }
+.mainbg     { background-color: #00bb99;  }
+
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 4em;
+}
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.resize {
+text-align: right;
+font-size: .75em;
+}
+
+
+
+
+#drawing {
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+  }
+
+.full_home {
+  width: 100%;
+  margin: 0 auto;
+  position:fixed;
+  top: 0px;
+  text-align:center;
+  z-index:150;
+}
+.full_home a:link,a:visited,a:hover,a:active {
+  color: #000; 
+}
+.full_home a:hover {
+  color: #00bb99; 
+}
+
+  
+/* Full_iphone 
+@import url('./_iphone_20240102.css');*/
+
+/* Full stage 
+@import url('./_stage_20240102.css');*/
+
+/* Full nav 
+@import url('./_nav_20240102.css');*/
+
+/* footer */
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 0px) {
+  
+.footer{
+  position:absolute;
+  min-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  left: 0px;
+  bottom: -50px;
+  width: calc(100% - 0px);
+  height: 20px;
+  text-align:center;
+  z-index: 100;
+  color: #aaa;
+}
+
+}
+@media screen and (min-width: 768px) {
+  .footer{
+    position:absolute;
+    min-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    left: 0px;
+    bottom: -50px;
+    width: calc(100% - 0px);
+    height: 20px;
+    text-align:center;
+    z-index: 100;
+    color: #aaa;
+  }
+}
+@media screen and (min-width: 1000px) {
+
+}
+@media screen and (min-width: 1600px) {
+  .footer{
+    position:absolute;
+    min-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    left: 0px;
+    bottom: -50px;
+    width: calc(100% - 0px);
+    height: 20px;
+    text-align:center;
+    z-index: 100;
+    color: #aaa;
+  }
+  
+}
+
+
+
