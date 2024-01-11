@@ -3,7 +3,6 @@
 
 a {
   text-decoration: none;
-  color: #eee;
 }
 
 .id{
@@ -34,13 +33,14 @@ a {
       position: relative;
       width: calc(20% - 5px);
       display: inline-block;
+      background: none;
     }
 
     /* Dropdown Button */
     .dropbtn {
       position:absolute;
       left: 0px;
-      bottom: -10px;
+      bottom: 0px;
       width: calc(100% - 2px);
       height: 50px;
       
@@ -61,10 +61,8 @@ a {
     .dropdown-content {
       display: none;
       position: absolute;
-      bottom: 30px;
+      bottom: 51px;
       width: calc(100% - 5px);
-      background-color: #111;
-      /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
       z-index: 1;
     }
     .dropdown-content>ul .dropdown-content>ul>li{
@@ -75,34 +73,37 @@ a {
     }
     
     /* Links inside the dropdown */
-    .dropdown-content table {
+    .dropdown-content>table {
+      background-color: #fff;
       display: block;
       position: absolute;
       bottom: 0px;
-      width: 100%;
-      background-color: #111;
+      width: calc(20vw - 15px);
       border: 2px solid var(--main-color);
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
-      padding: 3px;
+      padding: 0px;
       color: aliceblue;
       text-decoration: none;
-      z-index: -1;
+      z-index: 10;
       
     }
+
+
     .dropdown-content table td {
-      width: 18vw;
-      text-align: left;
-      padding: 5px;
-      border-bottom: 1px solid var(--main-color);
+      
+      text-align: center;
+      padding-bottom: 10px;
+      margin: 0px;
+      /* border-bottom: 1px solid var(--main-color); */
     }
     .dropdown-content table th {
-      min-width: 18vw;
-      text-align: left;
-      padding: 5px;
+      /* background-color: var(--main-color); */
+      text-align: center;
+      border-radius: 15px;
     }
     .dropdown-content table td a {
-      
+      text-align: center;
       height: 20px;
     }
 
@@ -110,12 +111,42 @@ a {
       background-color: var(--main-color);
       color: black;
       font-size: 15px;
-      width: calc(20vw - 35px);
-      border-radius: 5px;
+      width: calc(20vw - 30px);
+      border-radius: 10px;
       text-align: center;
-      
+      padding: 10px 10px 10px 0px;
+      margin: 5px;
     }
     
+    .dropdown-sub {
+        color: black;
+        height: 20px;
+        font-size: 15px;
+        width: calc(20vw - 30px);
+        border-radius: 5px;
+        padding: 5px 0px 10px 5px;
+        text-align: left;
+        /* text-align: center; */
+      }
+
+      .dropdown-sub a {
+        display: block;
+        margin: 0px auto;
+        color: black;
+        font-size: 15px;
+        border-radius: 5px;
+        text-align: left;
+      }
+
+      .dropdown-sub a:hover {
+        margin: 0px auto;
+        background-color: #111;
+        color: var(--main-color);
+        font-size: 15px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
     /* Change color of dropdown links on hover */
     .dropdown-content a:hover {background-color: #ddd;}
     
@@ -129,53 +160,6 @@ a {
     
 
 
-    .full_btn{
-      position:absolute;
-      display: inline-block;
-      width: calc(20% - 2px);
-      height: 50px;
-      background-color: #111;
-      border-bottom: 2px solid var(--main-color);
-      font-size: 10px;
-      margin-right:-4px;
-      z-index: 55;
-      color: aliceblue;
-      font-size: 15px;
-    }
-    .full_btn:hover{
-      background-color:  var(--main-color);
-    }
-
-    .full_sub{
-      position: absolute;
-      display: none;
-      left: 5px;
-      width: calc(98% - 0px);
-      border-bottom: 2px solid var(--main-color);
-      list-style: none;
-      z-index: -1;
-      color: aliceblue;
-    }
-
-    .full_sub_item{
-      left: 5px;
-      width: calc(98% - 0px);
-      list-style: none;
-
-    }
-
-
-    .full_btn:hover>.full_sub{
-      display: block;
-
-    }
-
-    .full_btn .full_sub a{
-      background-color: #222;
-      color: white;
-      /* border-bottom: 1px solid #003a2f; */
-    
-    }
   }
   @media screen and (min-width: 768px) {
 
