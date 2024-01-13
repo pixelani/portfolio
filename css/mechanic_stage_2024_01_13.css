@@ -93,8 +93,8 @@
 }
 @media screen and (min-width: 1600px) {
   .full_screen .stage{
-    border-top-right-radius: 70px;
-    border-top-left-radius: 70px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
     height:calc(100% - 50px);
   } 
 }
