@@ -2,11 +2,11 @@
 <html>
   <head>
     <style>
-              body {
-            background-color: #666;
-            background-image: url('../img/slider_bg2.png');
-            background-attachment: fixed;	
-            background-repeat: no-repeat;
+      body {
+        background-color: #666;
+        background-image: url('../img/slider_bg2.png');
+        background-attachment: fixed;	
+        background-repeat: no-repeat;
         }
       #columns,.container{
         column-width:350px;
@@ -15,6 +15,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
       }
+
       #columns figure{
         display: inline-block;
         margin:0;
@@ -120,9 +121,9 @@
 	left: 0;
 	width: 50%;
 	height: 100%;
-	background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+	/* background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent); */
 	transform: skewX(45deg) translate(0);
-	transition: 0.5s;
+	transition: 0.1s;
 	filter: blur(0px);
 }
 .container .btn:hover a::before {
@@ -138,7 +139,7 @@
 	height: 10px;
 	background: #f00;
 	border-radius: 10px;
-	transition: 0.5s;
+	transition: 0.1s;
 	transition-delay: 0.5;
 }
 .container .btn:hover::before /*lightup button*/ {
@@ -156,9 +157,8 @@
 	top: -5px;
 	width: 30px;
 	height: 10px;
-	background: #f00;
 	border-radius: 10px;
-	transition: 0.5s;
+	transition: 0.1s;
 	transition-delay: 0.5;
 }
 .container .btn:hover::after /*lightup button*/ {
