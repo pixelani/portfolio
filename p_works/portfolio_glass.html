@@ -1,0 +1,458 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+              body {
+            background-color: #666;
+            background-image: url('../img/slider_bg2.png');
+            background-attachment: fixed;	
+            background-repeat: no-repeat;
+        }
+      #columns,.container{
+        column-width:350px;
+        column-gap: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      #columns figure{
+        display: inline-block;
+        margin:0;
+        margin-bottom: 15px;
+        padding:10px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.5);;
+      }
+
+
+      .container .btn {
+        position: relative;
+        top: 0px;
+        left: 0;
+        width: 250px;
+        height: 250px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      img{
+        position:absolute;
+        top: 20px;
+        width:250px;
+        
+        border-radius: 20px;
+      }
+
+      figcaption{
+        position:absolute;
+        bottom: -18px;
+        margin: 0 auto;
+        width: 100%;
+        text-align:center;  
+        color: white;
+        z-index: 100;
+        font-size: 10px;
+      }
+
+      h1 {
+            text-align: center;
+            color: #eee;
+            
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 20px;
+            
+            
+            border: 3px solid #02a0e5;
+            border-radius: 10px;
+            padding: 10px;
+            border-top: none;
+            border-bottom: none;
+            height: 20px;
+
+            opacity: 1;
+            width: 400px;
+            z-index: -100;
+            margin: 0px auto;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+.container .btn a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
+	padding: 10px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	overflow: hidden;
+	font-weight: 400px;
+	z-index: 1;
+	transition: 0.5s;
+	backdrop-filter: blur(15px);
+}
+.container .btn:hover a {
+	letter-spacing: 3px;
+}
+.container .btn a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+	transform: skewX(45deg) translate(0);
+	transition: 0.5s;
+	filter: blur(0px);
+}
+.container .btn:hover a::before {
+	transform: skewX(45deg) translate(200px);
+}
+.container .btn::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	bottom: -5px;
+	width: 30px;
+	height: 10px;
+	background: #f00;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0.5;
+}
+.container .btn:hover::before /*lightup button*/ {
+	bottom: 0;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+}
+
+.container .btn::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	top: -5px;
+	width: 30px;
+	height: 10px;
+	background: #f00;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0.5;
+}
+.container .btn:hover::after /*lightup button*/ {
+	top: 0;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+}
+.container .btn:before, /* 2*/
+.container .btn:after {
+	background: #2db2ff;
+	box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff,
+		0 0 60px #2db2ff;
+}
+.gap {
+    margin-top: 30px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <h1>portfolio</h1>
+    
+    <div id="columns" class="container">
+        
+          <div class="gap"><figure class="btn">
+            <a href="#"><img src="./img/const01.png"></a>
+            <figcaption>강남 JJ-Estatic</figcaption>
+        
+         </figure>
+    </div>
+      <div class="gap"><figure class="btn">
+        <a href="#"><img src="./img/const02.png"></a>
+        <figcaption>Twinhills APT</figcaption>
+      </figure>
+ </div>
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const03.png"></a>
+        <figcaption>POSCO R&D center</figcaption>
+      </figure>
+    </div>
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const04.png"></a>
+        <figcaption>Hyundai ESS Center</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const05.png"></a>
+        <figcaption>Gunyoung APT</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img src="./img/const06.png"></a>
+        <figcaption>Onyang Onchun</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const07.png"></a>
+        <figcaption>Seoul Grandpark</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const08.png" alt="i"></a>
+        <figcaption>Guango Center</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const09.png" alt="i"></a>
+        <figcaption>Gunyoung APT</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const10.png" alt="i"></a>
+        <figcaption>Daebul Univ.</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const11.png" alt="i"></a>
+        <figcaption>Pyeongchon</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const12.png" alt="i"></a>
+        <figcaption>Gunyoung APT</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const13.png" alt="i"></a>
+        <figcaption>Seoul Grandpark</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const14.png" alt="i"></a>
+        <figcaption>Aquatech</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const15.png" alt="i15"></a>
+        <figcaption>Edu Street</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const16.png" alt="i16"></a>
+        <figcaption>Songdo Festival</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const17.png" alt="i17"></a>
+        <figcaption>Police Hospital</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const18.png" alt="i18"></a>
+        <figcaption>Suwon Park</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const19.png" alt="i19"></a>
+        <figcaption>Jeju</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const20.png" alt="i20"></a>
+        <figcaption>Music Fountain</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const21.png" alt="i21"></a>
+        <figcaption>POSCO</figcaption>
+      </figure></div>
+  
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const22.png" alt="i22"></a>
+        <figcaption>Chungsong IceWall</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const23.png" alt="i23"></a>
+        <figcaption>Sinreuk-Temple</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const24.png" alt="i24"></a>
+        <figcaption>Hyoja-Dong</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/const25.png" alt="i25"></a>
+        <figcaption>Metapolis</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/env01.png" alt="e01"></a>
+        <figcaption>Themeforest GUIpack</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/env02.png" alt="e02"></a>
+        <figcaption>Themeforest GUIpack</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/env03.png" alt="e01"></a>
+        <figcaption>Themeforest Hero</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/env04.png" alt="e04"></a>
+        <figcaption>Themeforest Mockup</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/env05.png" alt="e05"></a>
+        <figcaption>Themeforest Mockup</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/em_01.png" alt="em01"></a>
+        <figcaption>Emblem Variable</figcaption>
+      </figure></div>
+     
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/em_02.png" alt="em02"></a>
+        <figcaption>Emblem Variable</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/em_03.png" alt="em03"></a>
+        <figcaption>Emblem Variable</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/em_04.png" alt="em04"></a>
+        <figcaption>Emblem Variable</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/em_05.png" alt="em05"></a>
+        <figcaption>Emblem Variable</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/em_06.png" alt="em06"></a>
+        <figcaption>Emblem Variable</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/em_07.png" alt="em07"></a>
+        <figcaption>Emblem Variable</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/em_08.png" alt="em08"></a>
+        <figcaption>PSD Template</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/em_09.png" alt="em09i"></a>
+        <figcaption>PSD Template</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/mob01.png" alt="m01"></a>
+        <figcaption>APP UI</figcaption>
+      </figure></div>
+ 
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/pf01.png" alt="p01"></a>
+        <figcaption>Charator</figcaption>
+      </figure></div>
+    
+
+      <div class="gap"><figure class="btn">
+        <a href="#"><img  src="./img/pf04.png" alt="p04"></a>
+        <figcaption>Poster</figcaption>
+      </figure></div>
+    
+
+    <div class="gap"><figure class="btn">
+      <a href="#"><img  src="./img/pf05.png" alt="p05"></a>
+      <figcaption>Introimage</figcaption>
+    </figure></div>
+    
+
+    <div class="gap"><figure class="btn">
+      <a href="#"><img  src="./img/val01.png" alt="v01"></a>
+      <figcaption>PSD Template</figcaption>
+    </figure></div>
+    
+
+    <div class="gap"><figure class="btn">
+      <a href="#"><img  src="./img/val02.png" alt="v02"></a>
+      <figcaption>PSD Template</figcaption>
+    </figure></div>
+    
+
+    <div class="gap"><figure class="btn">
+      <a href="#"><img  src="./img/val03.png" alt="v03"></a>
+      <figcaption>PSD Template</figcaption>
+    </figure></div>
+
+    
+
+    <div class="gap"><figure class="btn">
+      <a href="#"><img  src="./img/val04.png" alt="v04"></a>
+      <figcaption>PSD Template</figcaption>
+    </figure></div>
+    
+
+    <div class="gap"><figure class="btn">
+      <a href="#"><img  src="./img/val05.png" alt="v05"></a>
+      <figcaption>PSD Template</figcaption>
+    </figure></div>
+
+    
+
+    <div class="gap"><figure class="btn">
+      <a href="#"><img  src="./img/val06.png" alt="v06"></a>
+      <figcaption>Variable</figcaption>
+    </figure></div>
+    
+
+    <div class="gap"><figure class="btn">
+      <a href="#"><img  src="./img/val07.png" alt="v07"></a>
+      <figcaption>Variable</figcaption>
+    </figure></div>
+
+
+
+
+
+    </div>
+     
+     
+  </body>
+</html>
