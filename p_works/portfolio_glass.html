@@ -10,14 +10,13 @@
       .all {
         background-color: #000;
         	background: linear-gradient(to top, #082c54, #020203);
-          
         /* background-image: url('../img/slider_bg2.png'); */
-        background-attachment: fixed;	
+        /* background-attachment: fixed;	 */
         background-repeat: no-repeat;
         }
       #columns,.container{
-        column-width:350px;
-        column-gap: 15px;
+        column-width:300px;
+        column-gap: 45px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -118,25 +117,24 @@
 	transition: 0.5s;
 	backdrop-filter: blur(15px);
 }
-.container .btn:hover a {
+/* .container .btn:hover a {
 	letter-spacing: 3px;
-}
-.container .btn a::before {
+} */
+/* .container .btn a::before {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 50%;
 	height: 100%;
-	/* background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent); */
 	transform: skewX(45deg) translate(0);
 	transition: 0.1s;
 	filter: blur(0px);
-}
-.container .btn:hover a::before {
+} */
+/* .container .btn:hover a::before {
 	transform: skewX(45deg) translate(200px);
-}
-.container .btn::before {
+} */
+/* .container .btn::before {
 	content: "";
 	position: absolute;
 	left: 50%;
@@ -148,15 +146,15 @@
 	border-radius: 10px;
 	transition: 0.1s;
 	transition-delay: 0.5;
-}
-.container .btn:hover::before /*lightup button*/ {
+} */
+/* .container .btn:hover::before  {
 	bottom: 0;
 	height: 50%;
 	width: 80%;
 	border-radius: 30px;
-}
+} */
 
-.container .btn::after {
+/* .container .btn::after {
 	content: "";
 	position: absolute;
 	left: 50%;
@@ -167,19 +165,19 @@
 	border-radius: 10px;
 	transition: 0.1s;
 	transition-delay: 0.5;
-}
-.container .btn:hover::after /*lightup button*/ {
+} */
+/* .container .btn:hover::after  {
 	top: 0;
 	height: 50%;
 	width: 80%;
 	border-radius: 30px;
-}
-.container .btn:before, /* 2*/
+} */
+/* .container .btn:before, 
 .container .btn:after {
 	background: #2db2ff;
 	box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff,
 		0 0 60px #2db2ff;
-}
+} */
 .gap {
     margin-top: 30px;
 }
