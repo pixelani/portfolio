@@ -19,7 +19,10 @@ a {
   width:calc(100% - 20px);
   text-align:center;
   z-index: 50;
-
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
 } 
 
 
