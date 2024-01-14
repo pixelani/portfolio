@@ -20,7 +20,7 @@
 
 .full_screen .stage{
   position: absolute;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   top: 5px;
   left: 5px;
   width:calc(100% - 10px);
