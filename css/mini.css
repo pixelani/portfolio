@@ -1,0 +1,115 @@
+/* center */
+.c {
+    text-align: center;
+}
+
+.t{border: 1px solid red;}
+.top_margin{padding-top:0px;}
+
+.bg_e{
+	background-color: #fff;
+	border-bottom: 2px solid rgb(130, 203, 245);
+}
+
+#menu_box{
+	border: 0px solid red;
+}
+
+#menu_box div{
+	display: inline-block;
+}
+#menu_box #food_category_name{
+    background-color: #eee;
+    width: 83px;
+    padding: 5px 0px;
+    border-bottom: 2px solid rgb(130, 203, 245);
+    border-radius: 12px;
+    margin: 2px;
+}
+
+
+.category{
+    border: 1px solid #ccc;
+}
+
+.category:hover{
+    border: 1px solid #bb3939;
+}
+
+
+/* line */
+hr{
+    height: 5px;
+}
+
+/* section title line */
+.st{
+    font-size: 2em;
+    background-attachment: fixed;
+    background-image: url(../img/bg.jpg);
+    height: 80px;
+    padding-top: 20px;
+}
+
+.bg_black{
+    background-color: #eee;
+}
+
+/* btn */
+.btn_e{
+    background-color: #eee;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    padding: 5px 0px;
+    border-bottom: 2px solid rgb(130, 203, 245);
+    border-radius: 12px;
+    margin: 5px;
+}
+.btn_e:hover{
+    background-color: #98c8ff;
+    box-shadow: inset 0px 10px 5px 0px #6b99ce;
+    transition: 0.2s;
+}
+
+.btn_m{
+    background-color: #98c8ff;
+    width: 180px;
+    height: 50px;
+    font-size: 12px;
+    padding: 0px 20px;
+    border-bottom: 2px solid rgb(130, 203, 245);
+    border-radius: 12px;
+    margin: 5px;
+}
+
+.btn_up{
+    width: 50px;
+    height: 30px;
+    font-size: 12px;
+    padding: 5px 0px;
+    border-bottom: 2px solid rgb(130, 203, 245);
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.nav_loc{
+    
+    height: 30px;
+    font-size: 12px;
+    padding: 5px 0px;
+    border: 0px solid #333;
+    border-radius: 5px;
+    margin: 5px;
+    text-indent: 10px;
+
+    box-shadow: inset 1px 0px 1px #333,
+                inset 0px 0px 3px #eee;
+}
+
+.tt_image{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
