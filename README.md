@@ -4,3 +4,6 @@
 3. 영상 : After effect
 4. 이미지 : Photoshop
 
+5. 2024.04.07 update
+6. 
+
