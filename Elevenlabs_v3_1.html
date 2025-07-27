@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title>ElevenLabs 전체 태그 가이드 (다양한 예시 포함)</title>
+<style>
+    .tag-details-box {
+        background-color: #fff3e0;
+        border: 2px solid #ffa726;
+        border-radius: 12px;
+        padding: 16px;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .tag-details-box h3 {
+        margin-top: 0;
+        color: #ff6f00;
+    }
+    .tag-details-box p {
+        margin: 8px 0;
+    }
+    .tag-details-box code {
+        background-color: #fff8e1;
+        padding: 4px 6px;
+        border-radius: 4px;
+        font-size: 0.95em;
+        display: block;
+        margin: 6px 0;
+        white-space: pre-wrap;
+    }
+    .example-section {
+        background-color: #f8f9fa;
+        border-left: 4px solid #ff9800;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 4px;
+    }
+    .example-title {
+        font-weight: bold;
+        color: #e65100;
+        margin-bottom: 8px;
+    }
+    .tag-list button.selected {
+        background-color: #ff9000 !important;
+        color: #ffffff;
+    }
+    body { background-color: #dece3a; }
+    body { font-family: Arial, sans-serif; display: flex; padding: 10px; }
+    .tag-list { width: 30%; overflow-y: auto; max-height: 90vh; border-right: 1px solid #ccc; padding-right: 20px; margin-top: 80px;}
+    .tag-list button { display: block; width: 100%; margin: 5px 0; padding: 8px; background-color: #eee; border: none; cursor: pointer; text-align: left; }
+    .tag-list button:hover { background-color: #ddd; }
+
+    .category-toggle {
+        font-weight: bold;
+        background-color: #ccc;
+        color: #000000;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .category-toggle.active {
+        background-color: #ff6000 !important;
+        color: #ffffff !important;
+    }
+    .category-section { margin-bottom: 10px; display: none; }
+    .details { width: 60%; padding-left: 20px;  margin-top: 80px;}
+    .tag-highlight { font-weight: bold; color: #007acc; }
+  
+    .detail-section {
+        background-color: #fff;
+        border-radius: 8px;
+        border: 1px solid #ffc107;
+        padding: 10px 12px;
+        margin: 10px 0;
+    }
+
+    .all {
+      position: absolute;
+      padding: 0;
+      margin-top: -30px; 
+          }
+    
+    </style>
+</head>
+<body>
+<div class="all" style="width: 100%; padding: 20px 0 10px 20px; background-color: #dece3a; text-align: left; margin-bottom: 20px;">
+<h1> JakdangLabs [ Elevenlabs Guide 1.0 - Enhanced Examples ]</h1>
+</div>
+<div class="tag-list">
+<button class="category-toggle" id="toggle-btn-1" onclick="toggleSection('section0')">🎭 감정 표현 태그</button>
+<div class="category-section" id="section0">
+<button onclick="showTag('[angry]', '분노, 화남')">1. [angry] : 분노, 화남</button>
+<button onclick="showTag('[arrogant]', '거만함')">2. [arrogant] : 거만함</button>
+<button onclick="showTag('[calm]', '차분함, 안정감')">3. [calm] : 차분함, 안정감</button>
+<button onclick="showTag('[childlike]', '어린아이 같은')">4. [childlike] : 어린아이 같은</button>
+<button onclick="showTag('[crying]', '울음, 슬픈 반응')">5. [crying] : 울음, 슬픈 반응</button>
+<button onclick="showTag('[curious]', '호기심')">6. [curious] : 호기심</button>
+<button onclick="showTag('[defiant]', '저항적임')">7. [defiant] : 저항적임</button>
+<button onclick="showTag('[dramatic]', '극적임')">8. [dramatic] : 극적임</button>
+<button onclick="showTag('[energetic]', '활기차')">9. [energetic] : 활기참</button>
+<button onclick="showTag('[excited]', '신남, 들뜬 감정')">10. [excited] : 신남, 들뜬 감정</button>
+<button onclick="showTag('[flirtatious]', '장난스러운 유혹')">11. [flirtatious] : 장난스러운 유혹</button>
+<button onclick="showTag('[frustrated]', '답답함, 실망 또는 좌절')">12. [frustrated] : 답답함, 실망 또는 좌절</button>
+<button onclick="showTag('[happy]', '기쁨, 즐거움')">13. [happy] : 기쁨, 즐거움</button>
+<button onclick="showTag('[humble]', '겸손함')">14. [humble] : 겸손함</button>
+<button onclick="showTag('[impatient]', '조급함')">15. [impatient] : 조급함</button>
+<button onclick="showTag('[innocent]', '순수함')">16. [innocent] : 순수함</button>
+<button onclick="showTag('[intolerant]', '불관용적 태도')">17. [intolerant] : 불관용적 태도</button>
+<button onclick="showTag('[mature]', '성숙함')">18. [mature] : 성숙함</button>
+<button onclick="showTag('[mischievously]', '장난기, 장난스러움')">19. [mischievously] : 장난기, 장난스러움</button>
+<button onclick="showTag('[modest]', '수수하고 절제된 느낌')">20. [modest] : 수수하고 절제된 느낌</button>
+<button onclick="showTag('[mysterious]', '신비로움')">21. [mysterious] : 신비로움</button>
+<button onclick="showTag('[naive]', '순진함')">22. [naive] : 순진함</button>
+<button onclick="showTag('[nervous]', '긴장, 초조함')">23. [nervous] : 긴장, 초조함</button>
+<button onclick="showTag('[patient]', '인내심')">24. [patient] : 인내심</button>
+<button onclick="showTag('[rebellious]', '반항적임')">25. [rebellious] : 반항적임</button>
+<button onclick="showTag('[sad]', '슬픔')">26. [sad] : 슬픔</button>
+<button onclick="showTag('[sarcastic]', '빈정댐, 비꼼')">27. [sarcastic] : 빈정댐, 비꼼</button>
+<button onclick="showTag('[seductive]', '유혹적임')">28. [seductive] : 유혹적임</button>
+<button onclick="showTag('[sorrowful]', '비통함, 애도')">29. [sorrowful] : 비통함, 애도</button>
+<button onclick="showTag('[stubborn]', '고집스러움')">30. [stubborn] : 고집스러움</button>
+<button onclick="showTag('[sultry]', '관능적임')">31. [sultry] : 관능적임</button>
+<button onclick="showTag('[tired]', '피곤함, 지침')">32. [tired] : 피곤함, 지침</button>
+<button onclick="showTag('[tolerant]', '관대함')">33. [tolerant] : 관대함</button>
+<button onclick="showTag('[vain]', '자만심, 허영')">34. [vain] : 자만심, 허영</button>
+<button onclick="showTag('[vibrant]', '생기 있음')">35. [vibrant] : 생기 있음</button>
+<button onclick="showTag('[wise]', '지혜로움')">36. [wise] : 지혜로움</button>
+</div>
+<button class="category-toggle" id="toggle-btn-2" onclick="toggleSection('section1')">🗣️ 전달 방식 태그</button>
+<div class="category-section" id="section1">
+<button onclick="showTag('[commanding]', '명령하듯 단호하게 말함')">1. [commanding] : 명령하듯 단호하게 말함</button>
+<button onclick="showTag('[deadpan]', '무표정하고 건조하게, 감정 없이 말함')">2. [deadpan] : 무표정하고 건조하게, 감정 없이 말함</button>
+<button onclick="showTag('[dramatic tone]', '강조되고 연극적인 말투')">3. [dramatic tone] : 강조되고 연극적인 말투</button>
+<button onclick="showTag('[flatly]', '밋밋하게, 감정 없이 말함')">4. [flatly] : 밋밋하게, 감정 없이 말함</button>
+<button onclick="showTag('[melodic]', '음의 높낮이를 살려 노래하듯 말함')">5. [melodic] : 음의 높낮이를 살려 노래하듯 말함</button>
+<button onclick="showTag('[narrating]', '내레이션처럼 설명하거나 이야기하듯 말함')">6. [narrating] : 내레이션처럼 설명하거나 이야기하듯 말함</button>
+<button onclick="showTag('[playful]', '장난스럽고 유쾌하게 말함')">7. [playful] : 장난스럽고 유쾌하게 말함</button>
+<button onclick="showTag('[questioning]', '질문하듯 말함, 어조가 올라감')">8. [questioning] : 질문하듯 말함, 어조가 올라감</button>
+<button onclick="showTag('[robotic]', '기계처럼 일정하고 딱딱하게 말함')">9. [robotic] : 기계처럼 일정하고 딱딱하게 말함</button>
+<button onclick="showTag('[shouting]', '크게 외치듯 말함')">10. [shouting] : 크게 외치듯 말함</button>
+<button onclick="showTag('[whispering]', '속삭이듯 조용히 말함')">11. [whispering] : 속삭이듯 조용히 말함</button>
+<button onclick="showTag('[rushed]', '급하게 빠르게 말함')">12. [rushed] : 급하게 빠르게 말함</button>
+<button onclick="showTag('[slows down]', '속도를 늦춰 천천히 말함')">13. [slows down] : 속도를 늦춰 천천히 말함</button>
+</div>
+<button class="category-toggle" id="toggle-btn-3" onclick="toggleSection('section2')">⏱️ 타이밍 / 리듬 태그</button>
+<div class="category-section" id="section2">
+<button onclick="showTag('[drawn out]', '길게 늘여서 천천히 발화')">1. [drawn out] : 길게 늘여서 천천히 발화</button>
+<button onclick="showTag('[emphasize]', '강조해서 또렷하게 말함')">2. [emphasize] : 강조해서 또렷하게 말함</button>
+<button onclick="showTag('[flowing]', '부드럽고 끊김 없이 흘러가듯 말함')">3. [flowing] : 부드럽고 끊김 없이 흘러가듯 말함</button>
+<button onclick="showTag('[hastened]', '빠르고 급하게 말함')">4. [hastened] : 빠르고 급하게 말함</button>
+<button onclick="showTag('[hesitates]', '말을 머뭇거리며 망설임 표현')">5. [hesitates] : 말을 머뭇거리며 망설임 표현</button>
+<button onclick="showTag('[pause]', '일시 정지')">6. [pause] : 일시 정지</button>
+<button onclick="showTag('[quickly]', '빠르게 템포 있게 말함')">7. [quickly] : 빠르게 템포 있게 말함</button>
+<button onclick="showTag('[rhythmic]', '박자감 있게 말함')">8. [rhythmic] : 박자감 있게 말함</button>
+<button onclick="showTag('[slowly]', '느리게 차분히 말함')">10. [slowly] : 느리게 차분히 말함</button>
+<button onclick="showTag('[syncopated]', '불규칙한 리듬 강조')">12. [syncopated] : 불규칙한 리듬 강조</button>
+<button onclick="showTag('[with tempo]', '정해진 템포에 맞춰 일정하게 말함')">13. [with tempo] : 정해진 템포에 맞춰 일정하게 말함</button>
+</div>
+<button class="category-toggle" id="toggle-btn-4" onclick="toggleSection('section3')">🔊 비언어 반응 태그</button>
+<div class="category-section" id="section3">
+<button onclick="showTag('[breath]', '숨 들이쉬는 소리')">1. [breath] : 숨 들이쉬는 소리</button>
+<button onclick="showTag('[clears throat]', '헛기침, 주목 유도')">2. [clears throat] : 헛기침, 주목 유도</button>
+<button onclick="showTag('[cries]', '울기 시작하는 반응')">3. [cries] : 울기 시작하는 반응</button>
+<button onclick="showTag('[exhales]', '숨을 내쉬는 소리')">4. [exhales] : 숨을 내쉬는 소리</button>
+<button onclick="showTag('[gasp]', '깜짝 놀란 숨소리')">5. [gasp] : 깜짝 놀란 숨소리</button>
+<button onclick="showTag('[gasps]', '놀라며 숨 들이쉬는 소리')">6. [gasps] : 놀라며 숨 들이쉬는 소리</button>
+<button onclick="showTag('[giggles]', '가볍게 웃는 소리')">7. [giggles] : 가볍게 웃는 소리</button>
+<button onclick="showTag('[gulps]', '긴장하거나 놀라서 침 삼키는 소리')">8. [gulps] : 긴장하거나 놀라서 침 삼키는 소리</button>
+<button onclick="showTag('[laughing]', '웃고 있는 중')">9. [laughing] : 웃고 있는 중</button>
+<button onclick="showTag('[laughs]', '일반적인 웃음')">10. [laughs] : 일반적인 웃음</button>
+<button onclick="showTag('[moans]', '힘들거나 슬픈 신음')">11. [moans] : 힘들거나 슬픈 신음</button>
+<button onclick="showTag('[sigh]', '한숨')">12. [sigh] : 한숨</button>
+<button onclick="showTag('[sighs]', '한숨, 감정의 흐름')">13. [sighs] : 한숨, 감정의 흐름</button>
+<button onclick="showTag('[snorts]', '코웃음 또는 냉소적 반응')">14. [snorts] : 코웃음 또는 냉소적 반응</button>
+<button onclick="showTag('[stammers]', '말 더듬는 표현')">15. [stammers] : 말 더듬는 표현</button>
+<button onclick="showTag('[starts laughing]', '웃음 시작 반응')">16. [starts laughing] : 웃음 시작 반응</button>
+<button onclick="showTag('[wheezing]', '숨 가쁜 소리')">17. [wheezing] : 숨 가쁜 소리</button>
+</div>
+</div>
+<div class="details" id="tagDetails">
+<h3>왼쪽의 태그를 클릭하면 다양한 활용 예시가 표시됩니다</h3>
+</div>
+<script>
+    const tagExamples = {
+        '[angry]': {
+            basic: '[angry] 뭐라고?!',
+            combination: '[angry][frustrated] 아니 이게 말이 돼?! [pause] [tired] 하루 종일 이것만 했는데...',
+            timing: '[nervous] 실수했다고 화내지 마... [quickly][angry] 아니 잠깐, 왜 내가 사과해야 해?!',
+            funny: '[innocent] 치킨 한 마리만 시켰는데... [angry] 왜 배달비가 치킨값보다 비싸?!',
+            character: '[childlike] 엄마가 안 된다고 했는데... [angry][defiant] 근데 나는 하고 싶어!',
+            situation: '[tired] 오늘 야근이래... [pause] [angry] 또?! 이번 주만 벌써 네 번째야!'
+        },
+        '[arrogant]': {
+            basic: '[arrogant] 이건 당연히 내가 최고지.',
+            combination: '[arrogant] 나 같은 천재한테는... [pause] [humble] 아니, 그래도 도움이 필요할 때가 있어.',
+            timing: '[slowly][arrogant] 너희들... 내 실력을... [emphasize] 아직도 의심하는 거야?',
+            funny: '[arrogant] 내가 요리하면 미슐랭 3스타급이지. [pause] [nervous] 라면 끓이는 것도 요리에 포함되지?',
+            character: '[vain][arrogant] 거울 속의 나는... 완벽해. [sighs] 이렇게 잘생기는 것도 힘들어.',
+            situation: '[arrogant] 시험? 나한테는 식은 죽 먹기야. [pause] [frantically] 어? 시험이 내일이었다고?!'
+        },
+        '[calm]': {
+            basic: '[calm] 괜찮아, 천천히 하면 돼.',
+            combination: '[calm] 진정하자... [pause] [angry] 아니야, 진정 안 돼! [breath] [calm] 다시, 진정하자.',
+            timing: '[slowly][calm] 모든 일에는... 때가 있는 법이야.',
+            funny: '[calm] 괜찮아, 별일 아니야. [pause] [whispering] 속으로는 완전 패닉 상태지만.',
+            character: '[wise][calm] 젊은이여, 성급하면 안 되네. [giggles] 나도 겨우 스물다섯인데.',
+            situation: '[calm] 프레젠테이션 준비 완료. [pause] [gasps] 어? USB를 집에 두고 왔네? [breath] [calm] ...괜찮아.'
+        },
+        '[childlike]': {
+            basic: '[childlike] 우와, 이거 진짜 신기하다!',
+            combination: '[childlike] 엄마, 이거 뭐야? [curious] 만져봐도 돼? [excited] 우와!',
+            timing: '[quickly][childlike] 놀이공원 가자! 롤러코스터 타자! 솜사탕도 사자!',
+            funny: '[childlike] 어른이 되면 뭐든지 할 수 있다고 했는데... [sad] 왜 아직도 엄마한테 용돈 받지?',
+            character: '[innocent][childlike] 세상에는 나쁜 사람이 없다고 생각했는데... [gasps] 파인애플 피자를 좋아하는 사람이 있다니!',
+            situation: '[childlike] 첫 월급이야! [excited] 뭐 사지? [pause] [crying] 공과금 내고 나니까 라면값밖에 안 남았어...'
+        },
+        '[crying]': {
+            basic: '[crying] 왜 나만 이런 일을 겪는 거야...',
+            combination: '[sad] 힘들어... [crying] 정말 힘들어... [pause] [determined] 그래도 포기 안 해.',
+            timing: '[slowly][crying] 이제... 정말... 끝인가 봐...',
+            funny: '[crying] 드라마가 너무 감동적이야... [pause] [laughing] 근데 이거 개그 프로그램인데?',
+            character: '[tough] 나는 절대 안 울어. [pause] [crying] 근데 왜 눈물이 나지?',
+            situation: '[crying] 졸업이 이렇게 슬플 줄 몰랐어... [pause] [excited] 그런데 방학이 3개월이나 된다고?!'
+        },
+        '[curious]': {
+            basic: '[curious] 그건 왜 그런 거야?',
+            combination: '[curious] 신기하네... [excited] 더 알고 싶어! [impatient] 빨리 설명해줘!',
+            timing: '[hesitates] 음... [curious] 혹시 그거... 어떻게 하는 건지 알 수 있을까?',
+            funny: '[curious] 왜 피자는 네모 상자에 들어있는데 피자는 동그란 거야? [pause] [contemplative] 인생의 진리인가?',
+            character: '[innocent][curious] 어른들은 왜 맨날 돈 얘기만 해? [wise] 아, 돈이 없으면 라면도 못 먹는구나.',
+            situation: '[curious] 새로 온 동료는 어떤 사람일까? [nervous] 혹시 내보다 잘하면 어떡하지?'
+        },
+        '[defiant]': {
+            basic: '[defiant] 난 그렇게 못 해.',
+            combination: '[angry] 왜 내가 해야 해? [defiant] 난 안 해! [pause] [sighs] ...알겠어, 할게.',
+            timing: '[slowly][defiant] 절대... 절대로... 굴복하지 않겠어.',
+            funny: '[defiant] 다이어트 따위 안 해! [pause] [whispering] 근데 바지가 안 들어가네...',
+            character: '[rebellious][defiant] 어른들 말은 안 들어! [pause] [childlike] 그런데 엄마, 저녁은 뭘 먹어?',
+            situation: '[defiant] 야근 절대 안 해! [pause] [resigned] ...급여명세서 보니까 마음이 바뀌었어.'
+        },
+        '[dramatic]': {
+            basic: '[dramatic] 믿을 수가 없어!',
+            combination: '[gasps][dramatic] 이럴 수가! [pause] [deadpan] 아, 그냥 Wi-Fi가 끊어졌네.',
+            timing: '[slowly][dramatic] 이것은... 운명의... 순간이야...',
+            funny: '[dramatic] 내 인생 최대의 위기야! [pause] [innocent] 핸드폰 배터리가 5%밖에 안 남았어.',
+            character: '[theatrical][dramatic] 세상이여, 안녕! [giggles] 연극 연습하느라 힘들어.',
+            situation: '[dramatic] 이번 시험에서 떨어지면 인생 끝이야! [pause] [calm] 아, 재시험이 있구나.'
+        },
+        '[energetic]': {
+            basic: '[energetic] 자, 오늘도 힘차게 시작하자!',
+            combination: '[energetic] 해보자! [excited] 완전 신날 것 같아! [tired] ...5분 후엔 지쳐있겠지만.',
+            timing: '[quickly][energetic] 가자가자! 빨리빨리! 시간이 없어!',
+            funny: '[energetic] 운동 시작! [pause] [exhausted] 계단 한 층 올라왔는데 숨이 차네.',
+            character: '[vibrant][energetic] 월요일이 좋아! [pause] [confused] 어? 나 진짜 이상한가 봐.',
+            situation: '[energetic] 새 프로젝트 시작! [excited] 완전 기대돼! [realistic] ...야근의 향기가 벌써 느껴져.'
+        },
+        '[excited]': {
+            basic: '[excited] 대박! 이게 진짜라고?',
+            combination: '[excited] 와! [childlike] 진짜 신기해! [curious] 이거 어떻게 하는 거야?',
+            timing: '[quickly][excited] 빨리빨리! 못 기다리겠어!',
+            funny: '[excited] 드디어 금요일이야! [pause] [crying] 아, 내일 토요일 근무구나.',
+            character: '[innocent][excited] 첫 월급 받았어! [wise] 이제 어른이 된 기분이야! [reality_check] 세금이 이렇게 많이 나간다고?',
+            situation: '[excited] 복권 당첨! [gasps] 대박! [pause] [flatly] 5등이네. 5천원.'
+        },
+        '[flirtatious]': {
+            basic: '[flirtatious] 혹시... 나랑 영화 볼래요?',
+            combination: '[shy] 음... [flirtatious] 오늘 시간 있어? [nervous] 아니면 말고...',
+            timing: '[slowly][flirtatious] 오늘... 정말... 멋져 보여...',
+            funny: '[flirtatious] 당신의 매력에 빠졌어요. [pause] [innocent] 아, 그 치킨 브랜드 말하는 거였어요.',
+            character: '[confident][flirtatious] 내 매력을 견딜 수 있을까? [giggles] 거울 보면서 연습했어.',
+            situation: '[flirtatious] 커피 한 잔 어때요? [nervous] ...자판기 커피지만요.'
+        },
+        '[frustrated]': {
+            basic: '[frustrated] 왜 자꾸 이래!',
+            combination: '[frustrated] 아 진짜! [angry] 화나! [tired] 지쳐... [sighs]',
+            timing: '[building_up] 참자... 참자... [frustrated] 아 안 되겠다!',
+            funny: '[frustrated] 다이어트 1일차... [pause] 피자 시켰다. [self_aware] 나는 의지가 없는 인간이야.',
+            character: '[patient] 괜찮아, 이해해... [frustrated] 아니야! 안 괜찮아!',
+            situation: '[frustrated] 오늘만 20번째 "비밀번호가 틀렸습니다"... [typing] 내 생일도 틀렸다는 거야?'
+        },
+        '[happy]': {
+            basic: '[happy] 오늘 너무 좋은 날이야!',
+            combination: '[happy] 기분 좋아! [excited] 뭔가 좋은 일이 생길 것 같아! [optimistic] 오늘은 분명 럭키데이야!',
+            timing: '[melodic][happy] 좋은 하루~ 좋은 하루~',
+            funny: '[happy] 기분 최고! [pause] [confused] 어? 왜 기분이 좋지? 특별한 일도 없었는데.',
+            character: '[childlike][happy] 세상이 다 내 것 같아! [realistic] 물론 실제로는 빚만 있지만.',
+            situation: '[happy] 드디어 주말이야! [pause] [sighs] 아, 빨래하고 청소하고 장보고...'
+        },
+        '[humble]': {
+            basic: '[humble] 전 그저 제 역할을 했을 뿐이에요.',
+            combination: '[humble] 별거 아니에요... [proud] 사실 좀 뿌듯하긴 해요. [humble] 그래도 운이 좋았죠.',
+            timing: '[quietly][humble] 제가... 뭐... 잘한 건 아니고요...',
+            funny: '[humble] 저는 평범한 사람이에요. [pause] [whispering] 평범한 사람이 이렇게 잘생겼나?',
+            character: '[wise][humble] 나이 먹고 깨달은 건... 아는 게 별로 없다는 거야.',
+            situation: '[humble] 별로 대단한 건 아니에요. [pause] [proud] 그냥... 전국 1등 했을 뿐이에요.'
+        },
+        '[impatient]': {
+            basic: '[impatient] 아직도 안 끝났어?',
+            combination: '[impatient] 빨리! [frustrated] 왜 이렇게 느려! [apologetic] 아, 미안... 조급했나 봐.',
+            timing: '[quickly][impatient] 언제까지 기다려야 해? 시간이 없다고!',
+            funny: '[impatient] 2분이면 된다고 했잖아! [pause] [checking_time] 벌써 3분이 지났어!',
+            character: '[type_a][impatient] 효율성이 생명이야! [pause] [realizes] 화장실 가는 시간도 아까워.',
+            situation: '[impatient] 엘리베이터 왜 이렇게 안 와? [pause] [embarrassed] 아, 내가 버튼을 안 눌렀네.'
+        },
+        '[innocent]': {
+            basic: '[innocent] 나 진짜 아무것도 몰라.',
+            combination: '[innocent] 저 정말 모르거든요... [curious] 그게 뭔가요? [childlike] 가르쳐 주세요!',
+            timing: '[softly][innocent] 저... 혹시... 제가 뭔가 잘못했나요?',
+            funny: '[innocent] 세상 사람들이 다 착할 줄 알았어. [pause] [disillusioned] 주차 요금이 이렇게 비쌀 줄은 몰랐지.',
+            character: '[pure][innocent] 악의라는 게 뭔지 몰라. [pause] [learning] 아, 월요일 아침이 그런 거구나.',
+            situation: '[innocent] 회사생활이 어려울 게 뭐 있어? [pause] [reality_hits] 정치가 이렇게 복잡할 줄은...'
+        },
+        '[intolerant]': {
+            basic: '[intolerant] 그건 절대 받아들일 수 없어.',
+            combination: '[angry] 말도 안 돼! [intolerant] 절대 용납 못 해! [pause] [calming] ...하지만 이해하려고 노력해볼게.',
+            timing: '[firmly][intolerant] 안 돼. 절대 안 돼.',
+            funny: '[intolerant] 파인애플 피자는 피자가 아니야! [pause] [reluctantly] ...그래도 배고프면 먹긴 먹어.',
+            character: '[perfectionist][intolerant] 이 정도로는 안 돼! [exhausted] 완벽주의가 이렇게 피곤할 줄이야.',
+            situation: '[intolerant] 지각은 절대 안 돼! [pause] [embarrassed] 어? 내가 지금 늦었네?'
+        },
+        '[mature]': {
+            basic: '[mature] 그 일은 내 책임이었어.',
+            combination: '[mature] 제대로 처리하겠습니다. [confident] 믿어주세요. [humble] 실수했다면 사과드릴게요.',
+            timing: '[thoughtfully][mature] 신중하게... 생각해보자.',
+            funny: '[mature] 어른답게 행동해야지. [pause] [childlike] 근데 아이스크림 먹고 싶어.',
+            character: '[wise][mature] 나이가 들수록 아는 게 많아져. [laughs] 모르는 것도 더 많아지지만.',
+            situation: '[mature] 이 문제는 내가 해결할게. [pause] [googling] "이 문제 해결하는 법"'
+        },
+        '[mischievously]': {
+            basic: '[mischievously] 안 해봤다고는 안 했지~',
+            combination: '[innocent] 저 아무것도 안 했어요... [mischievously] 아직은요. [giggles]',
+            timing: '[slyly][mischievously] 혹시... 재미있는 일... 해볼까?',
+            funny: '[mischievously] 선생님, 숙제 깜빡했어요! [pause] [proudly] 거짓말! 다 했어요!',
+            character: '[playful][mischievously] 장난 한 번 쳐볼까? [innocent] 물론 착한 장난이에요.',
+            situation: '[mischievously] 동료 컴퓨터에 이상한 배경화면 설정해놨어. [giggles] 내일이 기대돼.'
+        },
+        '[modest]': {
+            basic: '[modest] 감사합니다. 운이 좋았어요.',
+            combination: '[modest] 별거 아니에요... [grateful] 도와주신 분들 덕분이죠. [humble] 저 혼자서는 못 했을 거예요.',
+            timing: '[quietly][modest] 그냥... 조금 잘했을 뿐이에요...',
+            funny: '[modest] 전 평범해요. [pause] [whispers] 평범한 사람이 이 정도로 특별하나?',
+            character: '[understated][modest] 그냥... 있는 그대로예요. [confident] 있는 그대로도 나쁘지 않죠.',
+            situation: '[modest] 1등 한 거? 별거 아니에요. [pause] [excited] 사실 완전 기뻐요!'
+        },
+        '[mysterious]': {
+            basic: '[mysterious] 그건 나만의 비밀이야.',
+            combination: '[mysterious] 알고 싶어? [pause] [teasingly] 하지만 말해줄 수 없어... [giggles] 농담이야!',
+            timing: '[slowly][mysterious] 그것은... 아무도 모르는... 비밀이지...',
+            funny: '[mysterious] 내게는 비밀이 있어... [pause] [embarrassed] 사실 양말에 구멍이 났어.',
+            character: '[enigmatic][mysterious] 모든 것에는... 숨겨진 의미가 있지. [pause] [normal] 점심은 뭐 먹지?',
+            situation: '[mysterious] 오늘 특별한 일이 생길 거야... [pause] [realistic] 특별할 거 없는 평범한 하루겠지만.'
+        },
+        '[naive]': {
+            basic: '[naive] 모두가 착한 줄 알았어.',
+            combination: '[naive] 세상이 이렇게 복잡할 줄 몰랐어... [learning] 하지만 배워가고 있어. [optimistic] 여전히 좋은 사람들이 더 많을 거야.',
+            timing: '[innocently][naive] 정말... 그런 거였어?',
+            funny: '[naive] 어른이 되면 모든 걸 알 줄 알았는데... [confused] 세금 계산은 왜 이렇게 어려워?',
+            character: '[pure][naive] 사랑이면 다 되는 줄 알았어. [realistic] 집세도 내야 한다는 걸 몰랐지.',
+            situation: '[naive] 첫 직장이니까 모두 친절할 거야! [pause] [learning] 아, 회사 정치라는 게 있구나.'
+        },
+        '[nervous]': {
+            basic: '[nervous] 괜히 떨리네...',
+            combination: '[nervous] 떨려... [breathing] 심호흡하자... [encouraging] 할 수 있어!',
+            timing: '[shakily][nervous] 저... 저기... 말씀드릴 게 있는데요...',
+            funny: '[nervous] 발표 준비 완벽해! [pause] [panicking] 어? 발표자료를 안 가져왔네?',
+            character: '[anxious][nervous] 괜찮을까? 잘못되면 어떡하지? [overthinking] 아니, 분명 잘못될 거야.',
+            situation: '[nervous] 첫 데이트야... [sweating] 뭘 입지? 뭘 말하지? [panic] 화장실부터 가야겠어.'
+        },
+        '[patient]': {
+            basic: '[patient] 괜찮아요, 기다릴게요.',
+            combination: '[patient] 천천히 해도 돼요... [understanding] 급할 거 없어요. [supportive] 제가 도와드릴까요?',
+            timing: '[calmly][patient] 시간이... 얼마나 걸리든... 괜찮아요.',
+            funny: '[patient] 기다리는 건 익숙해요. [pause] [muttering] 인터넷 속도 때문에 인내심이 늘었거든요.',
+            character: '[zen][patient] 모든 일에는 때가 있어. [checking_time] 근데 점심시간은 언제야?',
+            situation: '[patient] 병원 대기실에서... [pause] [sighs] 3시간째 기다리는 중이에요.'
+        },
+        '[rebellious]': {
+            basic: '[rebellious] 난 절대 따르지 않아.',
+            combination: '[rebellious] 규칙 따위! [defiant] 내 맘대로 할 거야! [pause] [reality] ...그래도 법은 지켜야겠다.',
+            timing: '[defiantly][rebellious] 절대... 굴복하지... 않겠어!',
+            funny: '[rebellious] 다이어트 규칙 따위 안 지켜! [pause] [guilty] 근데 살은 왜 안 빠지지?',
+            character: '[punk][rebellious] 시스템에 맞서 싸우겠어! [pause] [practical] 그런데 월세는 내야 하니까...',
+            situation: '[rebellious] 회사 규정 따위! [pause] [worried] 그런데 잘리면 어떡하지?'
+        },
+        '[sad]': {
+            basic: '[sad] 그런 일이 있었다니...',
+            combination: '[sad] 슬퍼... [crying] 정말 슬퍼... [pause] [hopeful] 그래도 괜찮아질 거야.',
+            timing: '[slowly][sad] 이렇게... 끝나는 거구나...',
+            funny: '[sad] 아이스크림이 떨어졌어... [dramatic] 내 인생 최악의 순간이야.',
+            character: '[melancholy][sad] 비 오는 날엔 왜 이렇게 우울할까... [cheering_up] 치킨이나 시켜먹자.',
+            situation: '[sad] 드라마 주인공이 죽었어... [sobbing] 왜 착한 사람만 죽어!'
+        },
+        '[sarcastic]': {
+            basic: '[sarcastic] 와, 정말 멋진 아이디어네~',
+            combination: '[sarcastic] 정말 대단하다~ [pause] [sincere] 아니, 진짜로 잘했어.',
+            timing: '[drily][sarcastic] 네... 정말... 훌륭하네요...',
+            funny: '[sarcastic] 월요일이 좋아서 어쩔 줄 모르겠다~ [deadpan] 정말 최고야.',
+            character: '[witty][sarcastic] 당신의 논리력에 감탄해요~ [laughs] 농담이에요, 재밌잖아요.',
+            situation: '[sarcastic] 지각한 이유가 "시계가 느렸다"고요? [applauding] 창의적이네요~'
+        },
+        '[seductive]': {
+            basic: '[seductive] 넌 나한테 빠질 수밖에 없을 걸?',
+            combination: '[seductive] 오늘 밤... [mysterious] 특별한 시간을 보내지 않을래? [giggles] 넷플릭스 보자는 거야.',
+            timing: '[sultry][seductive] 이리... 가까이... 와봐...',
+            funny: '[seductive] 내 매력에 빠져봐... [pause] [normal] 아, 그냥 친구로 지내자.',
+            character: '[confident][seductive] 내 앞에서는 누구도 저항할 수 없어... [reality_check] 거울 연습의 성과야.',
+            situation: '[seductive] 당신만을 위한 특별한 밤... [pause] [practical] 야식 시킬 건데 뭐 먹을래?'
+        },
+        '[sorrowful]': {
+            basic: '[sorrowful] 정말 미안해...',
+            combination: '[sorrowful] 마음이 아파... [crying] 이렇게 될 줄 몰랐어... [comforting] 괜찮아질 거야.',
+            timing: '[mournfully][sorrowful] 이별은... 이렇게... 아픈 거구나...',
+            funny: '[sorrowful] 내 청춘이 끝났어... [pause] [realizing] 아직 스물다섯인데?',
+            character: '[grieving][sorrowful] 세월이 너무 빨라... [nostalgic] 어제 같은데 벌써...',
+            situation: '[sorrowful] 방학이 끝났어... [mourning] 다시 학교로... 현실로...'
+        },
+        '[stubborn]': {
+            basic: '[stubborn] 난 내 방식대로 할 거야.',
+            combination: '[stubborn] 절대 안 바꿔! [pause] [considering] ...그래도 한 번 들어는 볼게.',
+            timing: '[firmly][stubborn] 내... 뜻은... 변하지 않아.',
+            funny: '[stubborn] GPS 따위 안 봐! 내가 길을 더 잘 알아! [pause] [lost] ...여기가 어디지?',
+            character: '[determined][stubborn] 내 신념은 굽히지 않겠어! [flexible] 물론 합리적인 의견이면 들어볼게.',
+            situation: '[stubborn] 매뉴얼 안 보고도 조립할 수 있어! [pause] [frustrated] 이 나사가 왜 안 맞지?'
+        },
+        '[sultry]': {
+            basic: '[sultry] 이 밤, 우리 둘만의 시간이야.',
+            combination: '[sultry] 오늘 밤은... [mysterious] 뭔가 달라... [giggles] 새 향수 샀거든.',
+            timing: '[slowly][sultry] 이 순간을... 영원히... 기억하고 싶어...',
+            funny: '[sultry] 내 목소리가 섹시하지? [pause] [normal] 감기 걸려서 이래.',
+            character: '[alluring][sultry] 나만 바라봐... [pause] [practical] 아, 그냥 메뉴판 좀 봐줘.',
+            situation: '[sultry] 완벽한 분위기야... [pause] [reality] 근데 왜 모기가 이렇게 많아?'
+        },
+        '[tired]': {
+            basic: '[tired] 오늘 진짜 너무 힘들다.',
+            combination: '[tired] 지쳐... [yawning] 하아... [determined] 그래도 해야 할 일은 해야지.',
+            timing: '[wearily][tired] 언제까지... 이렇게... 살아야 하나...',
+            funny: '[tired] 잠이 부족해... [pause] [calculating] 12시간 잤는데도?',
+            character: '[exhausted][tired] 인생이 마라톤이래... [pause] [wheezing] 나는 100미터도 힘든데.',
+            situation: '[tired] 야근 또 해야 해... [sighs] 집이 그리워...'
+        },
+        '[tolerant]': {
+            basic: '[tolerant] 그럴 수도 있지, 이해해.',
+            combination: '[tolerant] 괜찮아, 다 이유가 있을 거야. [understanding] 누구에게나 실수는 있어.',
+            timing: '[patiently][tolerant] 괜찮아요... 천천히 하세요...',
+            funny: '[tolerant] 파인애플 피자도 나름 괜찮아... [pause] [whispers] 라고 말하고 싶지만 아니야.',
+            character: '[wise][tolerant] 모든 사람은 다르니까... [pause] [limit] 그래도 선은 있어야지.',
+            situation: '[tolerant] 지각해도 괜찮아, 다 사정이 있을 거야. [pause] [checking] 근데 매일은 좀...'
+        },
+        '[vain]': {
+            basic: '[vain] 난 거울 속 내 모습이 너무 좋아.',
+            combination: '[vain] 나 오늘 완전 멋져! [admiring] 거울아 거울아~ [giggles] 매일 이런 기분이야.',
+            timing: '[admiringly][vain] 나는... 정말... 완벽해...',
+            funny: '[vain] 내가 이렇게 잘생긴 게 죄야... [pause] [realistic] 실제로는 평범한데 자신감만 넘쳐.',
+            character: '[narcissistic][vain] 나 같은 미남은 흔하지 않아... [humble] 물론 내면의 아름다움도 중요하지.',
+            situation: '[vain] 셀카 100장 중에 1장만 마음에 들어... [perfectionist] 그것도 보정 후에야.'
+        },
+        '[vibrant]': {
+            basic: '[vibrant] 이 노래 진짜 에너지 넘친다!',
+            combination: '[vibrant] 완전 신나! [energetic] 춤추고 싶어! [happy] 기분 최고야!',
+            timing: '[enthusiastically][vibrant] 오늘은... 정말... 활기찬 하루야!',
+            funny: '[vibrant] 에너지 폭발! [pause] [tired] 5분 후면 소파에 누워있을 거야.',
+            character: '[lively][vibrant] 생기 넘치는 하루! [realistic] 커피 3잔의 힘이야.',
+            situation: '[vibrant] 새로운 취미 시작! [excited] 완전 재밌을 것 같아! [pause] [worried] 돈은 얼마나 들까?'
+        },
+        '[wise]': {
+            basic: '[wise] 모든 일엔 다 이유가 있어.',
+            combination: '[wise] 경험이 가르쳐준 건... [thoughtful] 성급하면 안 된다는 거야. [humble] 물론 나도 아직 배우는 중이지.',
+            timing: '[thoughtfully][wise] 인생이란... 긴 여행이지...',
+            funny: '[wise] 나이가 들수록 깨닫는 건... [pause] [reality] 젊을 때가 좋았다는 거야.',
+            character: '[sage][wise] 진정한 지혜는... [pause] [googling] 구글에서 찾는 거야.',
+            situation: '[wise] 돈이 전부가 아니야... [pause] [practical] 그래도 월세는 내야 하니까.'
+        },
+        '[commanding]': {
+            basic: '[commanding] 지금 당장 멈춰!',
+            combination: '[commanding] 내 말을 들어! [pause] [softer] 제발... 중요한 일이야.',
+            timing: '[authoritatively][commanding] 즉시... 실행하라!',
+            funny: '[commanding] 명령한다! 점심 메뉴를 정하라! [pause] [helpless] ...아무거나 좋으니까.',
+            character: '[leader][commanding] 모두 따라와! [pause] [lost] 어... 길을 잃었네.',
+            situation: '[commanding] 회의 시작한다! [pause] [whispering] 근데 자료 준비 안 했어...'
+        },
+        '[deadpan]': {
+            basic: '[deadpan] 그래. 재미있네.',
+            combination: '[deadpan] 와. 대단하다. [pause] [genuine] 아니, 진짜로 잘했어.',
+            timing: '[flatly][deadpan] 정말... 흥미진진하네...',
+            funny: '[deadpan] 월요일이야. 야호. [pause] [sarcastic] 인생 최고의 순간이네.',
+            character: '[dry][deadpan] 감동적이야. 눈물이 안 나올 뿐이지.',
+            situation: '[deadpan] 놀라워. 또 지각이네. [checking_watch] 신기록 달성.'
+        },
+        '[dramatic tone]': {
+            basic: '[dramatic tone] 우린 모두... 끝났어.',
+            combination: '[dramatic tone] 이것이... 운명인가! [pause] [normal] 아니면 그냥 우연이고.',
+            timing: '[theatrically][dramatic tone] 마지막... 순간이... 왔다!',
+            funny: '[dramatic tone] 내 인생 최대의 위기! [pause] [mundane] 핸드폰 배터리가 20%야.',
+            character: '[theatrical][dramatic tone] 세상이여 안녕! [giggles] 연극 동아리 출신이거든.',
+            situation: '[dramatic tone] 이번이 마지막 기회야! [pause] [realistic] 아니면 내일 다시 시도하고.'
+        },
+        '[flatly]': {
+            basic: '[flatly] 좋아. 그냥 그렇게 해.',
+            combination: '[flatly] 알겠어. [pause] [sighs] 진짜 상관없어.',
+            timing: '[monotonously][flatly] 그래... 좋아... 최고야...',
+            funny: '[flatly] 생일 축하해. [pause] [remembering] 아, 진심으로 축하한다고.',
+            character: '[unenthusiastic][flatly] 와. 신나. 정말로.',
+            situation: '[flatly] 또 야근이네. 좋아. [internal_screaming] 속으론 울고 있어.'
+        },
+        '[melodic]': {
+            basic: '[melodic] 반가워요~ 오늘도 좋은 하루~',
+            combination: '[melodic] 좋은 아침이에요~ [singing] 날씨도 맑고~ [happy] 기분도 좋아요~',
+            timing: '[sing-song][melodic] 이렇게~ 좋은~ 날에는~',
+            funny: '[melodic] 월요일도~ 좋은 날~ [pause] [reality_check] 거짓말 같지만 노래로 하니까 덜 우울해.',
+            character: '[musical][melodic] 인생은~ 노래 같아~ [pause] [practical] 가사는 좀 슬프지만.',
+            situation: '[melodic] 일하러~ 가야지~ [sighs] 노래로 해도 현실은 현실이네.'
+        },
+        '[narrating]': {
+            basic: '[narrating] 그리고 그는 그날 밤 집에 돌아왔다.',
+            combination: '[narrating] 이야기는 이렇게 시작됐다... [dramatic] 평범한 월요일 아침이었는데...',
+            timing: '[storytelling][narrating] 옛날 옛적에... 한 청년이 있었다...',
+            funny: '[narrating] 주인공은 커피를 마시며 생각했다... "오늘도 살아남았구나."',
+            character: '[documentary_style][narrating] 야생의 직장인이 자연 서식지에서 관찰되고 있습니다.',
+            situation: '[narrating] 그리고 그날, 그는 깨달았다... 점심을 안 가져왔다는 것을.'
+        },
+        '[playful]': {
+            basic: '[playful] 너 이거 못 할 줄 알았지~',
+            combination: '[playful] 장난이야~ [giggles] 농담이었어! [affectionate] 잘했어!',
+            timing: '[teasingly][playful] 혹시~ 이거~ 못하는 거 아니야~?',
+            funny: '[playful] 내가 이길 줄 알았지? [pause] [surprised] 어? 진짜 이겼네?',
+            character: '[mischievous][playful] 재미있는 일 없을까~ [plotting] 몰래 장난 한 번 쳐볼까?',
+            situation: '[playful] 오늘 뭐 하고 놀까? [pause] [adult_reality] 아, 세금 신고해야 하네.'
+        },
+        '[questioning]': {
+            basic: '[questioning] 진짜 그렇게 생각해?',
+            combination: '[questioning] 정말? [curious] 어떻게? [interested] 더 알고 싶어!',
+            timing: '[inquiringly][questioning] 그게... 정말... 맞는 말이야?',
+            funny: '[questioning] 이게 맞아? [confused] 아니면 내가 이상한 거야?',
+            character: '[skeptical][questioning] 진짜로? 확실해? 의심스러운데?',
+            situation: '[questioning] 이 길이 맞아? [GPS_checking] 네비가 이상한 곳으로 안내하는 것 같은데?'
+        },
+        '[robotic]': {
+            basic: '[robotic] 작업을 시작합니다. 카운트다운 3, 2, 1.',
+            combination: '[robotic] 명령을 수행합니다. [pause] [human] 잠깐, 나 로봇 아닌데?',
+            timing: '[mechanically][robotic] 프로세스... 진행... 중입니다...',
+            funny: '[robotic] 커피 제조를 시작합니다. [pause] [normal] 그냥 믹스커피인데 뭘 이렇게 거창하게.',
+            character: '[ai][robotic] 인간의 감정을 분석 중입니다. [pause] [confused] 왜 월요일을 싫어하는지 이해 불가.',
+            situation: '[robotic] 업무 효율 최적화 모드 가동. [pause] [tired] 그냥 집에 가고 싶다는 뜻이야.'
+        },
+        '[shouting]': {
+            basic: '[shouting] 빨리 피해!',
+            combination: '[shouting] 들려! [pause] [normal] 아, 이어폰 끼고 있었구나.',
+            timing: '[loudly][shouting] 지금! 당장! 빨리!',
+            funny: '[shouting] 대박! 로또 당첨! [pause] [deflated] 5등이네... 5천원.',
+            character: '[excited][shouting] 완전 최고야! [neighbors_complaining] 아, 옆집에서 항의하네.',
+            situation: '[shouting] 골!!! [pause] [embarrassed] 여기 도서관이었네.'
+        },
+        '[whispering]': {
+            basic: '[whispering] 아무한테도 말하지 마...',
+            combination: '[whispering] 비밀인데... [excited] 너만 알아야 해! [normal] 사실 별거 아니야.',
+            timing: '[softly][whispering] 조용히... 들키면... 안 돼...',
+            funny: '[whispering] 다이어트 중이라고 했는데... [guilty] 치킨 시켰어.',
+            character: '[secretive][whispering] 아무도 모르게... [pause] [loud] 어? 마이크 켜져있었어?',
+            situation: '[whispering] 회의 중인데... [bored] 언제 끝나지? 졸려.'
+        },
+        '[rushed]': {
+            basic: '[rushed] 빨리 해! 시간 없어!',
+            combination: '[rushed] 늦겠어! [panicking] 어떡해! [calming] 아니다, 진정하자.',
+            timing: '[quickly][rushed] 지금당장바로즉시!',
+            funny: '[rushed] 급해! 중요한 약속이! [pause] [remembering] 아, 내일이었네.',
+            character: '[always_late][rushed] 맨날 이래... 시간 관리 좀 하자... [repeating_cycle] 내일부터.',
+            situation: '[rushed] 발표 5분 전! [frantically] 자료가 어디 있지?!'
+        },
+        '[slows down]': {
+            basic: '[slows down] 다시... 한번... 설명할게.',
+            combination: '[slows down] 천천히... [pause] 이해했어? [checking] 괜찮아?',
+            timing: '[gradually_slower] 점점... 더... 천천히...',
+            funny: '[slows down] 중요한... 이야기를... [pause] [normal] 사실 별거 아니야.',
+            character: '[patient_teacher][slows down] 다시... 차근차근... [encouraging] 할 수 있어.',
+            situation: '[slows down] 마지막... 5분... 남았어... [dramatic] 이제... 정말... 끝이야...'
+        },
+        '[drawn out]': {
+            basic: '[drawn out] 안녕... 오랜만이야...',
+            combination: '[drawn out] 정말... 오래... 기다렸어... [happy] 드디어 만났네!',
+            timing: '[stretching][drawn out] 이렇게... 길게... 말하면...',
+            funny: '[drawn out] 피곤해... 자고... 싶어... [pause] [energetic] 그런데 할 일이 산더미야!',
+            character: '[lazy][drawn out] 움직이기... 싫어... [pause] [motivated] 그래도 해야지.',
+            situation: '[drawn out] 금요일... 오후... 6시... [freedom] 드디어... 주말이야...'
+        },
+        '[emphasize]': {
+            basic: '[emphasize] 이건 정말 *중요해*!',
+            combination: '[emphasize] 진짜로! [strongly] 정말로! [calm] 알아들었지?',
+            timing: '[stressing][emphasize] 이것만은... 꼭... 기억해!',
+            funny: '[emphasize] 다이어트는 *내일*부터! [pause] [repeating] 맨날 내일이네.',
+            character: '[teacher][emphasize] 시험에 *꼭* 나온다! [student_panic] 모두 메모해!',
+            situation: '[emphasize] 이번 프로젝트는 *정말* 중요해! [whispers] 실패하면 우리 모두...'
+        },
+        '[flowing]': {
+            basic: '[flowing] 모든 것이 자연스럽게 이어진다.',
+            combination: '[flowing] 부드럽게... 자연스럽게... [peaceful] 마음이 편해져.',
+            timing: '[smoothly][flowing] 강물처럼... 흘러가듯이...',
+            funny: '[flowing] 인생이 물 흐르듯 자연스럽게... [reality] 급류를 타고 있는 것 같지만.',
+            character: '[zen][flowing] 모든 것은... 흘러간다... [practical] 월세 빼고는.',
+            situation: '[flowing] 회의가 순조롭게 진행되고... [interrupted] 어? 정전이야?'
+        },
+        '[hastened]': {
+            basic: '[hastened] 지금 가야 해! 늦었어!',
+            combination: '[hastened] 빨리빨리! [panicking] 시간이! [breathless] 없어!',
+            timing: '[accelerating][hastened] 더빨리! 더빨리!',
+            funny: '[hastened] 급해! 중요한 일이! [pause] [anticlimactic] 화장실.',
+            character: '[always_rushing][hastened] 인생은 빨리빨리! [exhausted] 그런데 왜 이렇게 피곤하지?',
+            situation: '[hastened] 마감 1시간 전! [typing_frantically] 키보드가 불타고 있어!'
+        },
+        '[hesitates]': {
+            basic: '[hesitates] 음... 그게... 사실은...',
+            combination: '[hesitates] 말하기가... [nervous] 좀 그런데... [brave] 그래도 해야겠어.',
+            timing: '[uncertain][hesitates] 어... 음... 그러니까...',
+            funny: '[hesitates] 사실... 고백할 게 있어... [pause] [mundane] 점심 네가 낸 거 깜빠했어.',
+            character: '[shy][hesitates] 저... 혹시... [courage_building] 아니야, 말할게!',
+            situation: '[hesitates] 상사한테... 말해야 하나... [decision] 그냥 모른 척 하자.'
+        },
+        '[pause]': {
+            basic: '그건... [pause] 정말 힘든 결정이었어.',
+            combination: '말하고 싶은데... [pause] [deep_breath] 용기가 안 나.',
+            timing: '인생은... [pause] ...참 어려워.',
+            funny: '오늘 저녁은... [pause] 라면. 또 라면.',
+            character: '사랑이란... [pause] [philosophical] 참 복잡한 거야.',
+            situation: '월급날까지... [pause] [counting] 3일 남았어.'
+        },
+        '[quickly]': {
+            basic: '[quickly] 자, 시작하자! 빨리!',
+            combination: '[quickly] 빨리빨리! [excited] 신나! [realistic] 5분 후엔 지쳐있을 거야.',
+            timing: '[rapid_fire][quickly] 하나둘셋넷다섯!',
+            funny: '[quickly] 다이어트 시작! [pause] [slow] 내일부터... 천천히...',
+            character: '[energetic][quickly] 일찍 일어나는 새가 벌레를 잡는다! [tired] 그런데 왜 이렇게 졸리지?',
+            situation: '[quickly] 빨리 끝내고 퇴근하자! [reality_check] 추가 업무가 들어왔네...'
+        },
+        '[rhythmic]': {
+            basic: '[rhythmic] 하나, 둘, 셋, 넷!',
+            combination: '[rhythmic] 박자에 맞춰서~ [singing] 하나둘하나둘~ [dancing] 신나!',
+            timing: '[beat][rhythmic] 덤-치-덤-치-덤-치!',
+            funny: '[rhythmic] 일-하-기-싫-어! [beat] 집-에-가-고-싶-어!',
+            character: '[musical][rhythmic] 인생은~ 리듬이야~ [offbeat] 근데 나는 박치야.',
+            situation: '[rhythmic] 타이핑도~ 리듬을~ 타면서~ [error] 오타가 늘어나네.'
+        },
+        '[slowly]': {
+            basic: '[slowly] 천천히 말해줄게.',
+            combination: '[slowly] 차근차근... [patient] 이해될 때까지... [kind] 설명해줄게.',
+            timing: '[deliberately][slowly] 하나씩... 천천히...',
+            funny: '[slowly] 중요한... 말이... 있어... [normal] 점심 뭐 먹지?',
+            character: '[wise][slowly] 급하게... 살지... 말자... [irony] 라고 늦게 깨달았어.',
+            situation: '[slowly] 퇴근시간이... 다가온다... [anticipation] 설레.'
+        },
+        '[syncopated]': {
+            basic: '[syncopated] 너... 진짜... 왜 그랬어?',
+            combination: '[syncopated] 이상해... 뭔가... [confused] 이상하다고... [realization] 아!',
+            timing: '[off_beat][syncopated] 하나... 둘... 넷?',
+            funny: '[syncopated] 다이어트... 중인데... [pause] 치킨이... 왜... 이렇게... 맛있어?',
+            character: '[confused][syncopated] 인생이... 왜... 이렇게... 복잡해?',
+            situation: '[syncopated] 일이... 왜... 이렇게... 많아? [overwhelmed] 도움이... 필요해...'
+        },
+        '[with tempo]': {
+            basic: '[with tempo] 좋아, 좋아, 잘하고 있어!',
+            combination: '[with tempo] 하나, 둘! 하나, 둘! [encouraging] 계속해!',
+            timing: '[steady_beat][with tempo] 일정하게, 꾸준하게!',
+            funny: '[with tempo] 월, 화, 수, 목! [tired] 금요일은 언제 와?',
+            character: '[coach][with tempo] 할 수 있어! 할 수 있어! [cheerleading] 파이팅!',
+            situation: '[with tempo] 타이핑, 타이핑, 계속 타이핑! [cramping] 손목이 아파...'
+        },
+        '[breath]': {
+            basic: '[breath] 하아...',
+            combination: '[breath] 후... [tired] 드디어 끝났다... [relief] 살았어.',
+            timing: '[breathing_in] 스으... [breathing_out] 하아...',
+            funny: '[breath] 계단 한 층... [exhausted] 운동 부족이 심각해.',
+            character: '[relaxation][breath] 명상 중... [peaceful] 마음이 편해져...',
+            situation: '[breath] 발표 끝... [relief] 심장이 터질 뻔했어.'
+        },
+        '[clears throat]': {
+            basic: '[clears throat] 흠흠, 모두 주목해 주세요.',
+            combination: '[clears throat] 에헴... [formal] 말씀드리고 싶은 게 있습니다.',
+            timing: '[attention_getting][clears throat] 흠흠... 잠깐만요...',
+            funny: '[clears throat] 중요한 발표가... [pause] [casual] 점심 뭐 먹을까요?',
+            character: '[formal][clears throat] 신사 숙녀 여러분... [informal] 아, 그냥 친구들아.',
+            situation: '[clears throat] 회의를 시작하겠습니다... [whispering] 자료는 어디 있지?'
+        },
+        '[cries]': {
+            basic: '[cries] 흐흑...',
+            combination: '[cries] 으흑... [sobbing] 너무 슬퍼... [comforting] 괜찮아질 거야.',
+            timing: '[breaking_down][cries] 흐흑... 흐흐흑...',
+            funny: '[cries] 드라마가 너무 슬퍼... [pause] [laughing] 어? 개그씬이었네.',
+            character: '[emotional][cries] 감동 영화 보면... 항상 이래...',
+            situation: '[cries] 졸업식이 이렇게 슬플 줄... [happy_tears] 그래도 기뻐.'
+        },
+        '[exhales]': {
+            basic: '[exhales] 후우...',
+            combination: '[exhales] 후... [tired] 힘들었다... [accomplished] 그래도 해냈어.',
+            timing: '[long_exhale][exhales] 후우우우...',
+            funny: '[exhales] 운동 끝... [checking] 5분 했는데 왜 이렇게 힘들어?',
+            character: '[relief][exhales] 드디어... 주말이야...',
+            situation: '[exhales] 시험 끝... [freedom] 이제 놀 수 있어!'
+        },
+        '[gasp]': {
+            basic: '[gasp] 헉!',
+            combination: '[gasp] 헉! [surprised] 깜짝이야! [laughing] 놀랐네!',
+            timing: '[sudden][gasp] 헉!',
+            funny: '[gasp] 헉! 체중계 숫자가... [denial] 고장난 것 같아.',
+            character: '[easily_startled][gasp] 헉! [embarrassed] 또 놀랐네...',
+            situation: '[gasp] 헉! 마감이 오늘이었어?!'
+        },
+        '[gasps]': {
+            basic: '[gasps] 아아악!',
+            combination: '[gasps] 으악! [panicking] 어떡해! [calming] 진정하자...',
+            timing: '[sharp_intake][gasps] 아악!',
+            funny: '[gasps] 으악! 거미야! [pause] [embarrassed] 먼지였네...',
+            character: '[dramatic][gasps] 세상에! 믿을 수 없어!',
+            situation: '[gasps] 악! 비밀번호 틀렸어! [trying_again] 한 번 더...'
+        },
+        '[giggles]': {
+            basic: '[giggles] 히히히~',
+            combination: '[giggles] 히히~ [cute] 재밌어~ [happy] 기분 좋아!',
+            timing: '[light_laughter][giggles] 히히히히~',
+            funny: '[giggles] 비밀이 있어~ [whispering] 사실 별거 아닌데 히히~',
+            character: '[playful][giggles] 장난치는 거 좋아해~ 히히~',
+            situation: '[giggles] 동료 깜짝 선물~ 히히~ 놀랄걸?'
+        },
+        '[gulps]': {
+            basic: '[gulps] 꿀꺽...',
+            combination: '[gulps] 꿀꺽... [nervous] 떨린다... [brave] 그래도 해야지.',
+            timing: '[swallowing][gulps] 꿀꺽...',
+            funny: '[gulps] 다이어트 음식... [reluctant] 맛없어 보이는데... 꿀꺽.',
+            character: '[anxious][gulps] 발표 앞두고... 항상 이래... 꿀꺽.',
+            situation: '[gulps] 상사 부르네... [worried] 뭔 일일까... 꿀꺽.'
+        },
+        '[laughing]': {
+            basic: '[laughing] 하하하하하!',
+            combination: '[laughing] 하하하! [joyful] 너무 재밌어! [happy] 배 아파!',
+            timing: '[continuous][laughing] 하하하하하하!',
+            funny: '[laughing] 하하하! 내 과거 사진... [cringing] 왜 그렇게 입었지?',
+            character: '[cheerful][laughing] 웃는 게 제일 좋아! 하하하!',
+            situation: '[laughing] 하하하! 실수했는데 다들 웃어줘서 다행이야!'
+        },
+        '[laughs]': {
+            basic: '[laughs] 하하!',
+            combination: '[laughs] 하하! [amused] 재밌네! [sharing] 너도 들어봐!',
+            timing: '[short_burst][laughs] 하하!',
+            funny: '[laughs] 하하! 진지하게 말했는데 웃긴가?',
+            character: '[easy_going][laughs] 뭐든 웃어넘기자! 하하!',
+            situation: '[laughs] 하하! 실수했지만 웃으면 되지 뭐!'
+        },
+        '[moans]': {
+            basic: '[moans] 으으...',
+            combination: '[moans] 으으... [tired] 힘들어... [determined] 그래도 계속해야지.',
+            timing: '[weary][moans] 으으으...',
+            funny: '[moans] 으으... 월요일이야... [dramatic] 인생이 이렇게 힘들 줄이야...',
+            character: '[suffering][moans] 다이어트가... 이렇게... 힘들 줄이야... 으으...',
+            situation: '[moans] 으으... 야근 또 해야 해... 집에 가고 싶어...'
+        },
+        '[sigh]': {
+            basic: '[sigh] 하아... 정말 피곤하네.',
+            combination: '[sigh] 하아... [tired] 지쳐... [hopeful] 그래도 내일은 나을 거야.',
+            timing: '[deep_sigh][sigh] 하아아아...',
+            funny: '[sigh] 하아... 어른이 되면 모든 걸 알 줄 알았는데... [confused] 세금 계산이 이렇게 어려울 줄이야.',
+            character: '[philosophical][sigh] 인생이란... 하아... 참 복잡해.',
+            situation: '[sigh] 하아... 또 월요일이야... 주말은 왜 이렇게 빨리 가지?'
+        },
+        '[sighs]': {
+            basic: '[sighs] 에휴...',
+            combination: '[sighs] 에휴... [resigned] 할 수 없지... [accepting] 그런가 보다.',
+            timing: '[resigned][sighs] 에휴우...',
+            funny: '[sighs] 에휴... 다이어트 첫날부터 실패... [self_forgiveness] 내일부터 다시 시작하자.',
+            character: '[accepting][sighs] 인생이 다 그런 거지... 에휴...',
+            situation: '[sighs] 에휴... 또 야근이야... 이게 직장생활인가 봐.'
+        },
+        '[snorts]': {
+            basic: '[snorts] 푸흣.',
+            combination: '[snorts] 푸흣... [amused] 웃겨... [teasing] 정말 그렇게 생각해?',
+            timing: '[dismissive][snorts] 푸흣...',
+            funny: '[snorts] 푸흣... 다이어트 한다고? [looking_at_pizza] 그러면서 피자 시키고?',
+            character: '[sarcastic][snorts] 푸흣... 그럴 줄 알았어.',
+            situation: '[snorts] 푸흣... "5분만 늦을게"라고? [checking_time] 벌써 30분 지났는데?'
+        },
+        '[stammers]': {
+            basic: '[stammers] 나... 나 말이야...',
+            combination: '[stammers] 저... 저기... [nervous] 말씀드릴 게... [brave] 있어요!',
+            timing: '[stuttering][stammers] 그... 그러니까...',
+            funny: '[stammers] 나... 나는... [confident] 자신감 넘치는 사람이야!',
+            character: '[shy][stammers] 저... 저도... 말하고 싶은 게... 있어요...',
+            situation: '[stammers] 발... 발표... [deep_breath] 시작하겠습니다!'
+        },
+        '[starts laughing]': {
+            basic: '[starts laughing] 푸흐흐~',
+            combination: '[starts laughing] 푸흐흐~ [building_up] 하하하! [full_laughter] 하하하하!',
+            timing: '[beginning][starts laughing] 푸... 푸흐흐...',
+            funny: '[starts laughing] 푸흐흐~ 진지한 얘기 중인데... [can_not_stop] 멈출 수가 없어!',
+            character: '[infectious][starts laughing] 푸흐흐~ 웃음이 전염돼~',
+            situation: '[starts laughing] 푸흐흐~ 실수했는데 오히려 재밌네!'
+        },
+        '[wheezing]': {
+            basic: '[wheezing] 흐흑... 하아...',
+            combination: '[wheezing] 헉헉... [exhausted] 못 해... [determined] 그래도... 해야지...',
+            timing: '[labored_breathing][wheezing] 헉... 헉... 헉...',
+            funny: '[wheezing] 헉헉... 계단 2층... [out_of_shape] 운동 좀 해야겠어...',
+            character: '[unfit][wheezing] 건강관리... 헉헉... 해야겠어...',
+            situation: '[wheezing] 헉헉... 지각할 뻔해서... 뛰어왔어...'
+        }
+    };
+
+    function showTag(tag, description) {
+      document.querySelectorAll('.tag-list button').forEach(btn => btn.classList.remove('selected'));
+      event.target.classList.add('selected');
+      
+      const examples = tagExamples[tag] || {};
+      
+      const detailBox = document.createElement('div');
+      detailBox.className = 'tag-details-box';
+      detailBox.innerHTML = `
+        <h3><span class='tag-highlight'>${tag}</span> 태그 활용 가이드</h3>
+        <div class='detail-section'><strong>의미:</strong> ${description}</div>
+        
+        <div class='example-section'>
+          <div class='example-title'>💡 기본 사용법</div>
+          <code>${examples.basic || tag + ' 기본 예시'}</code>
+        </div>
+        
+        <div class='example-section'>
+          <div class='example-title'>🎭 다른 감정과 조합</div>
+          <code>${examples.combination || tag + '와 다른 태그 조합 예시'}</code>
+        </div>
+        
+        <div class='example-section'>
+          <div class='example-title'>⏰ 타이밍 태그와 함께</div>
+          <code>${examples.timing || tag + '와 타이밍 태그 조합'}</code>
+        </div>
+        
+        <div class='example-section'>
+          <div class='example-title'>😄 재미있는 상황</div>
+          <code>${examples.funny || tag + ' 유머러스한 활용'}</code>
+        </div>
+        
+        <div class='example-section'>
+          <div class='example-title'>👤 캐릭터별 활용</div>
+          <code>${examples.character || tag + ' 캐릭터 특성 반영'}</code>
+        </div>
+        
+        <div class='example-section'>
+          <div class='example-title'>🎬 실제 상황 예시</div>
+          <code>${examples.situation || tag + ' 실생활 적용'}</code>
+        </div>
+        
+        <div class='detail-section'><strong>💡 활용 팁:</strong> 
+        • 태그는 문장의 앞, 중간, 또는 끝에 자연스럽게 배치하세요<br>
+        • [pause] 태그와 함께 사용하면 더욱 자연스러운 연출이 가능합니다<br>
+        • 같은 감정 계열의 태그들을 조합하면 더 강한 표현이 됩니다<br>
+        • 상반된 감정 태그를 순서대로 사용하면 감정 변화를 자연스럽게 표현할 수 있습니다
+        </div>
+      `;
+      const container = document.getElementById('tagDetails');
+      container.innerHTML = '';
+      container.appendChild(detailBox);
+    }
+
+    function toggleSection(id) {
+      // Close all other sections
+      document.querySelectorAll('.category-section').forEach(section => {
+        if (section.id !== id) section.style.display = "none";
+      });
+      // Remove active class from all toggles
+      document.querySelectorAll('.category-toggle').forEach(btn => btn.classList.remove('active'));
+      // Toggle selected section
+      var section = document.getElementById(id);
+      var toggleBtn = document.querySelector(`[onclick*="${id}"]`);
+      if (section.style.display === "none" || section.style.display === "") {
+        section.style.display = "block";
+        toggleBtn.classList.add('active');
+      } else {
+        section.style.display = "none";
+        toggleBtn.classList.remove('active');
+      }
+    }
+</script>
+</body>
+</html>
+            
